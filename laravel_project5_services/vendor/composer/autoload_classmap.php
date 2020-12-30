@@ -6,11 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Additional_image' => $baseDir . '/app/Additional_image.php',
     'App\\Admin_role' => $baseDir . '/app/Admin_role.php',
     'App\\Applicant' => $baseDir . '/app/Applicant.php',
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminRoleController' => $baseDir . '/app/Http/Controllers/AdminRoleController.php',
     'App\\Http\\Controllers\\ApplicantController' => $baseDir . '/app/Http/Controllers/ApplicantController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -28,10 +30,8 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
-    'App\\Http\\Requests\\createAdminRequest' => $baseDir . '/app/Http/Requests/createAdminRequest.php',
     'App\\Http\\Requests\\createApplicantRequest' => $baseDir . '/app/Http/Requests/createApplicantRequest.php',
     'App\\Http\\Requests\\createCategoryRequest' => $baseDir . '/app/Http/Requests/createCategoryRequest.php',
-    'App\\Http\\Requests\\createSeekerRequest' => $baseDir . '/app/Http/Requests/createSeekerRequest.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

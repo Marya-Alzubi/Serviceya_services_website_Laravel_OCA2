@@ -14,23 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/hi', function () {
-    return view('dashboard.admin');
-});
-
-Route::get('/haaa', function () {
-    return view('web.index');
-});
-Route::get('categories', function () {
-    return view('/dashboard/category');
-});
-
 Route::resource("/categories", "categoryController");
-//Route::resource("/users", "userController");
 
 
 
+
+//Route::resource("/applicants", "applicantController");
+//write in url [/applicants/create] it will take you directly into applicant/Controller@create
+
+
+// temporary route to get understand // no need to write it
+Route::get('/applicants/create', 'applicantController@create');// insert into form
+Route::POST('/applicants', 'applicantController@store');// insert into form
+////////////
+Route::get('/applicants', 'applicantController@index'); // applicants table
+
+
+////////////////// auth
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

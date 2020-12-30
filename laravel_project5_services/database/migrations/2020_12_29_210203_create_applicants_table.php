@@ -25,7 +25,7 @@ class CreateApplicantsTable extends Migration
             $table->string('applicant_service');          // check button or dropdown list from 3 category
             $table->string('applicant_desc');
             $table->text('applicant_education_img');
-            $table->string('applicant_subscription_type'); // check button or dropdown list
+            $table->string('applicant_subscription_type')->nullable(); // check button or dropdown list
             $table->timestamps();
         });
     }

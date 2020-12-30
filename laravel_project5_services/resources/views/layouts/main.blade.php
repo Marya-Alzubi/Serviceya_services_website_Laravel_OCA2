@@ -13,7 +13,7 @@
     <title>@yield('title')</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{URL::asset('main/images/favicon.png')}}" type="image/png">
+    <link rel="shortcut icon" href="{{URL::asset('main/category_images/favicon.png')}}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="{{URL::asset('main/css/bootstrap.min.css')}}">
@@ -44,7 +44,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="#">
-                                <img src="{{URL::asset('main/images/logo.svg')}}" alt="Logo">
+                                <img src="{{URL::asset('main/category_images/logo.svg')}}" alt="Logo">
                             </a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +101,7 @@
                 </div> <!-- row -->
             </div> <!-- container -->
             <div class="header-shape">
-                <img src="{{URL::asset('main/images/header-shape.svg')}}" alt="shape">
+                <img src="{{URL::asset('main/category_images/header-shape.svg')}}" alt="shape">
             </div>
         </div> <!-- header content -->
     </header>
@@ -173,7 +173,7 @@
         </div> <!-- conteiner -->
         <div class="services-image d-lg-flex align-items-center">
             <div class="image">
-                <img src="{{URL::asset('main/images/services.png')}}" alt="Services">
+                <img src="{{URL::asset('main/category_images/services.png')}}" alt="Services">
             </div>
         </div> <!-- services image -->
     </section> --}}
@@ -220,7 +220,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="single-pricing pro mt-40">
                         <div class="pricing-baloon">
-                            <img src="assets/images/baloon.svg" alt="baloon">
+                            <img src="assets/category_images/baloon.svg" alt="baloon">
                         </div>
                         <div class="pricing-header">
                             <h5 class="sub-title">Pro</h5>
@@ -247,7 +247,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-9">
                     <div class="single-pricing enterprise mt-40">
                         <div class="pricing-flower">
-                            <img src="assets/images/flower.svg" alt="flower">
+                            <img src="assets/category_images/flower.svg" alt="flower">
                         </div>
                         <div class="pricing-header text-right">
                             <h5 class="sub-title">Enterprise</h5>
@@ -280,7 +280,7 @@
 
     {{-- <section id="call-to-action" class="call-to-action">
         <div class="call-action-image">
-            <img src="{{URL::asset('main/images/call-to-action.png')}}" alt="call-to-action">
+            <img src="{{URL::asset('main/category_images/call-to-action.png')}}" alt="call-to-action">
         </div>
 
         <div class="container-fluid">
@@ -316,7 +316,7 @@
                     <div class="col-lg-12">
                         <div class="footer-logo-support d-md-flex align-items-end justify-content-between">
                             <div class="footer-logo d-flex align-items-end">
-                                <a class="mt-30" href="index.html"><img src="{{URL::asset('main/images/logo.svg')}}" alt="Logo"></a>
+                                <a class="mt-30" href="index.html"><img src="{{URL::asset('main/category_images/logo.svg')}}" alt="Logo"></a>
 
                                 <ul class="social mt-30">
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>

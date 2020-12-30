@@ -11,4 +11,18 @@ protected $primaryKey ="applicant_id";
     public function cat_relation(){
         return $this->hasMany("App\Category");
     }
+
+
+    protected $fillable = [
+        "applicant_name",
+        "applicant_email"  ,
+        "applicant_mobile" ,
+        "applicant_city" ,
+        "applicant_service" ,
+        "applicant_desc",
+        "applicant_subscription_type" ,
+            "applicant_image" ,
+        "applicant_education_img" ,
+    ];
+
 }

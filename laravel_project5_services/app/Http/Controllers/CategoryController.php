@@ -42,7 +42,7 @@ class CategoryController extends Controller
             $file = $request->file('cat_image') ;
             $ext = $file->getClientOriginalExtension() ;
             $filename = time() . '.' . $ext ;
-            $file->move('images', $filename);
+            $file->move('category_images', $filename);
         }
         Category::create( [
             "cat_name"        =>$request->cat_name,
@@ -92,7 +92,7 @@ class CategoryController extends Controller
             $file = $request->file('cat_image') ;
             $ext = $file->getClientOriginalExtension() ;
             $filename = time() . '.' . $ext ;
-            $file->move('images', $filename);
+            $file->move('category_images', $filename);
         }
         else {
             $filename = Category::find($id)->cat_image;
