@@ -18,7 +18,7 @@ protected $primaryKey ="applicant_id";
         "applicant_email"  ,
         "applicant_mobile" ,
         "applicant_city" ,
-        "applicant_service" ,
+        "cat_id" ,
         "applicant_desc",
         "applicant_subscription_type" ,
             "applicant_image" ,

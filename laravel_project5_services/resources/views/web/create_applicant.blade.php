@@ -29,22 +29,21 @@
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
         </div>
-{{--        <div class="form-group">--}}
-{{--            <label for="exampleInputEmail1">Upload your image</label>--}}
-{{--            <input type="file" name="applicant_image" class="form-control" value="{{old('applicant_image')}}">--}}
-{{--            @error("applicant_image")--}}
-{{--            <p style="color:red;font-size: 1rem ;">{{$message}}</p>--}}
-{{--            @enderror--}}
-{{--        </div>--}}
-
         <div class="form-group">
-            <label for="applicant_service">Select your Service:</label>
-            <select name="applicant_service" id="">
-                @foreach($categories as $category)
-                <option value="{{$category->cat_id}}">{{$category->cat_name}}</option>
+            <label for="exampleInputEmail1">Upload your image</label>
+            <input type="file" name="applicant_image" class="form-control" value="{{old('applicant_image')}}">
+            @error("applicant_image")
+            <p style="color:red;font-size: 1rem ;">{{$message}}</p>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label for="applicant_service_id">Select your Service:</label>
+            <select name="applicant_service_id" id="">
+                @foreach($category as  $key => $cat)
+                    <option value="{{$cat->cat_id}}">{{$cat->cat_name}} </option>
                 @endforeach
             </select>
-            @error("applicant_service")
+            @error("applicant_service_id")
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
         </div>

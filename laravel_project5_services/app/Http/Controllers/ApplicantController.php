@@ -30,9 +30,16 @@ return view("dashboard/applicants/applicants_table", compact("applicants"));
      */
     public function create()
     {
-        $categories = Category::all();
-        return view("web/create_applicant", compact('categories'));
+        //
+        $category =Category::select('cat_id','cat_name')->get();
+        return view("web/create_applicant",compact('category'));
     }
+
+    // show without fetch any data
+//    public function create()
+//    {
+//        return view("web/create_applicant", compact('categories'));
+//    }
 
     /**
      * Store a newly created resource in storage.
@@ -42,43 +49,20 @@ return view("dashboard/applicants/applicants_table", compact("applicants"));
      */
     public function store(Request $request)
     {
-
-//        if ($request->hasFile('applicant_image')) {
-//
-//            foreach ($request->file('applicant_image') as $file) {
-//                $ext = $file->getClientOriginalExtension();
-//                $filename = time() . '.' . $ext;
-//                $file->move('applicant_images', $filename);
-//            }
-//        }
-
-//        $input=$request->all();
-//        $category_images=array();
-//        if($files=$request->file('category_images')){
-//            foreach($files as $file){
-//                $name=$file->getClientOriginalName();
-//                $file->move('image',$name);
-//                $category_images[]=$name;
-//            }
-//        }
-//        /*Insert your data*/
-//
-//        Detail::insert( [
-//            'category_images'=>  implode("|",$category_images),
-//            'description' =>$input['description'],
-//            //you can put other insertion here
-//        ]);
-
-//
-//        return redirect('redirecting page');
-
         if ($request->hasFile('applicant_education_img')) {
             $file = $request->file('applicant_education_img') ;
             $ext = $file->getClientOriginalExtension() ;
             $filename = time() . '.' . $ext ;
             $file->move('applicant_images', $filename);
+        }
+
+        if ($request->hasFile('applicant_image')) {
+            $file = $request->file('applicant_image') ;
+            $ext = $file->getClientOriginalExtension() ;
+            $applicant_image = time() . '.' . $ext ;
+            $file->move('applicant_images', $applicant_image);
         } else {
-            $filename = "defaultImage.png";
+            $applicant_image = "defaultImage.png";
         }
 
 
@@ -87,10 +71,12 @@ return view("dashboard/applicants/applicants_table", compact("applicants"));
             "applicant_email"                   =>$request->applicant_email,
             "applicant_mobile"                  =>$request->applicant_mobile,
             "applicant_city"                    =>$request->applicant_city,
-            "applicant_service"                 =>$request->applicant_service,
+            "cat_id"                            =>$request->applicant_service_id,
+//            "applicant_service_id"            =>$request->applicant_service_id,
+//            "cat_id"                          =>$request->applicant_service,
             "applicant_desc"                    =>$request->applicant_desc,
             "applicant_subscription_type"       =>$request->applicant_subscription_type,
-//            "applicant_image"                   =>$filename2,
+            "applicant_image"                   =>$applicant_image,
             "applicant_education_img"           => $filename ,
         ]);
 //        return redirect("/applicants");
