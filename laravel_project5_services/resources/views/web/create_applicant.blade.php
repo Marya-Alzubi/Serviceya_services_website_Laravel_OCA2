@@ -29,21 +29,23 @@
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Upload your image</label>
-            <input type="file" name="applicant_image" class="form-control" value="{{old('applicant_image')}}">
-            @error("applicant_image")
-            <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label for="applicant_service_id">Select your Service:</label>
-            <select name="applicant_service_id" id="">
-                @foreach($categories as $category)
-                    <option value="{{$category->cat_id}}">{{$category->cat_name}} </option>
+{{--        <div class="form-group">--}}
+{{--            <label for="exampleInputEmail1">Upload your image</label>--}}
+{{--            <input type="file" name="applicant_image" class="form-control" value="{{old('applicant_image')}}">--}}
+{{--            @error("applicant_image")--}}
+{{--            <p style="color:red;font-size: 1rem ;">{{$message}}</p>--}}
+{{--            @enderror--}}
+{{--        </div>--}}
+
+        <div class="form-group form-control input-sm">
+            <label for="applicant_service">Select your Service:</label>
+              <select name="applicant_service" id="">
+                @foreach($x as  $key => $cat)
+                           {{-- {{$x}} --}}
+                <option value="{{$cat->id}}">{{$cat->cat_name}} </option>
                 @endforeach
             </select>
-            @error("applicant_service_id")
+            @error("applicant_service")
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
         </div>
@@ -54,14 +56,16 @@
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
         </div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="exampleInputPassword1">Educational certificates</label>
             <input type="file" name="applicant_education_img" class="form-control" value="{{old('applicant_education_img')}}" >
             @error("applicant_education_img")
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
-        </div>
-        <div class="form-group">
+        </div> --}}
+
+
+        {{-- <div class="form-group">
             <label for="applicant_subscription_type">Select the Subscription type:</label>
             <select name="applicant_subscription_type" id="">
                 <option value="trail">3 Month trial </option>
@@ -72,9 +76,12 @@
             @error("applicant_subscription_type")
             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
             @enderror
-        </div>
+        </div> --}}
         <button type="submit_applicant" name="submit" class="btn btn-primary"> Submit </button>
     </form>
 
 
 
+    @foreach($x as  $key => $cat)
+    {{$cat}}
+    @endforeach

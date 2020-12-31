@@ -415,7 +415,6 @@ class ComposerStaticInit985c18d25e72de8a302be1f3b6a23bae
     );
 
     public static $classMap = array (
-        'App\\Additional_image' => __DIR__ . '/../..' . '/app/Additional_image.php',
         'App\\Admin_role' => __DIR__ . '/../..' . '/app/Admin_role.php',
         'App\\Applicant' => __DIR__ . '/../..' . '/app/Applicant.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',

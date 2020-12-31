@@ -8,6 +8,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+//  public function test(){
+//     $category = Category::find(2);
+//     $y= $category->applicants;
+//     foreach($y as $key => $val){
+//         echo "<br>";
+//        return  $val->applicant_name;
+
+//     };
+//  }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -15,8 +28,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-//        $categories = Category::all();
-        $categories = Category::orderByDesc('cat_id')->get();
+        $categories = Category::all();
+        $categories = Category::orderByDesc('id')->get();
         return view("dashboard.categories.create_category", compact("categories"));
     }
 
@@ -42,13 +55,14 @@ class CategoryController extends Controller
             $file = $request->file('cat_image') ;
             $ext = $file->getClientOriginalExtension() ;
             $filename = time() . '.' . $ext ;
-            $file->move('category_images', $filename);
+            $file->move('images', $filename);
         }
         Category::create( [
             "cat_name"        =>$request->cat_name,
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
+
         return redirect("/categories");
 
         // this method will not be effective in uploading image
@@ -62,10 +76,6 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -92,7 +102,7 @@ class CategoryController extends Controller
             $file = $request->file('cat_image') ;
             $ext = $file->getClientOriginalExtension() ;
             $filename = time() . '.' . $ext ;
-            $file->move('category_images', $filename);
+            $file->move('images', $filename);
         }
         else {
             $filename = Category::find($id)->cat_image;
@@ -121,4 +131,43 @@ class CategoryController extends Controller
         Category::findOrFail($id)->delete();
         return redirect("/categories");
     }
+
+    /*
+    *Main Website Functionality,
+    show method is to view all categories in the landing page
+    singlecategory method to list all providers that provide this category
+    singleprovider method to show person data
+
+    */
+
+
+    public function showCat(Category $category)
+    {
+        $categories = Category::all();
+
+        return view('web.index',compact('categories'));
+    }
+
+
+
+    public function singlecategory(Category $category, $id)
+    {
+        $applicants = Category::find($id);
+        $specific_applicants= $applicants->applicants;
+        // return $specific_applicants;
+
+        return view('web.singlecategory',compact('specific_applicants'));
+
+    }
+///testing, list all applicants that has category id equals 1
+// public function testing()
+// {
+//     $applicants = Category::find(1);
+//     $specific_applicants= $applicants->applicants;
+//     // return $specific_applicants;
+//     return view('','');
+//     }
+
+
+
 }

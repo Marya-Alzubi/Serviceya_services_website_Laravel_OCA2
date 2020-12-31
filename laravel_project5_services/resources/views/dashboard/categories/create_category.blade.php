@@ -50,7 +50,7 @@
             <td>{{$category->cat_id}}</td>
             <td>{{$category->cat_name}}</td>
             <td>{{$category->cat_desc}}</td>
-            <td><img width="200" height="200" src="{{asset("category_images/$category->cat_image")}}"></td>
+            <td><img width="200" height="200" src="{{asset("images/$category->cat_image")}}"></td>
             <td >
                 <a href="categories/{{$category->cat_id}}/edit">
                     <button class="btn btn-danger" value="EDIT" > Edit </button>

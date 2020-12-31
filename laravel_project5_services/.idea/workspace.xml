@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SeekerController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Seeker.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_29_211129_create_seekers_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +134,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/applicants" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../traineesAdminDashboard_static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,11 +146,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard\applicants" />
       <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\web" />
       <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard\categories" />
     </key>
   </component>
@@ -161,16 +168,8 @@
       <updated>1609293398281</updated>
       <workItem from="1609293399818" duration="579000" />
       <workItem from="1609294026418" duration="7975000" />
-      <workItem from="1609318867380" duration="46931000" />
+      <workItem from="1609318867380" duration="13862000" />
     </task>
-    <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
-      <created>1609409802498</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1609409802498</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,9 +185,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama" />
   </component>
 </project>
