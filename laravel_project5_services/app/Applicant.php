@@ -4,12 +4,13 @@ namespace App;
 use App\Category;
 
 use Illuminate\Database\Eloquent\Model;
-
+//\Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Applicant extends Model
 {
 protected $primaryKey ="applicant_id";
-    public function cat_relation(){
-        return $this->hasMany("App\Category");
+    public function category():
+    {
+        return $this->belongsTo("App\Category");
     }
 
 

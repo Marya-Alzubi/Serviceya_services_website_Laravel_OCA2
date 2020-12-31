@@ -39,8 +39,8 @@
         <div class="form-group">
             <label for="applicant_service_id">Select your Service:</label>
             <select name="applicant_service_id" id="">
-                @foreach($category as  $key => $cat)
-                    <option value="{{$cat->cat_id}}">{{$cat->cat_name}} </option>
+                @foreach($categories as $category)
+                    <option value="{{$category->cat_id}}">{{$category->cat_name}} </option>
                 @endforeach
             </select>
             @error("applicant_service_id")

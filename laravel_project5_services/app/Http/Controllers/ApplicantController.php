@@ -15,11 +15,18 @@ class ApplicantController extends Controller
      */
     public function index()
     {
-//        $applicants = Applicant::orderByDesc('applicant_id')->get();
-//        return view("dashboard/applicants/applicants_table", compact("applicants"));
+        $applicants = Applicant::orderByDesc('applicant_id')->get();
+        $categories =Category::all();
+        return view("dashboard/applicants/applicants_table", compact("applicants","categories"));
 
- $applicants = Applicant::where('applicant_service', "Health care")->get();
-return view("dashboard/applicants/applicants_table", compact("applicants"));
+// $applicants = Applicant::where('applicant_service', "Health care")->get();
+//return view("dashboard/applicants/applicants_table", compact("applicants"));
+
+    }
+    public function category1_index()
+    {
+ $applicants = Applicant::where('cat_id', "1")->get();
+return view("dashboard/applicants/category1_applicants_table", compact("applicants"));
 
     }
 
@@ -30,9 +37,10 @@ return view("dashboard/applicants/applicants_table", compact("applicants"));
      */
     public function create()
     {
-        //
-        $category =Category::select('cat_id','cat_name')->get();
-        return view("web/create_applicant",compact('category'));
+        //hana solution
+//        $categories =Category::select('cat_id','cat_name')->get();
+        $categories =Category::all();
+        return view("web/create_applicant",compact('categories'));
     }
 
     // show without fetch any data
@@ -72,8 +80,7 @@ return view("dashboard/applicants/applicants_table", compact("applicants"));
             "applicant_mobile"                  =>$request->applicant_mobile,
             "applicant_city"                    =>$request->applicant_city,
             "cat_id"                            =>$request->applicant_service_id,
-//            "applicant_service_id"            =>$request->applicant_service_id,
-//            "cat_id"                          =>$request->applicant_service,
+//          "applicant_service_id"              =>$request->applicant_service_id,
             "applicant_desc"                    =>$request->applicant_desc,
             "applicant_subscription_type"       =>$request->applicant_subscription_type,
             "applicant_image"                   =>$applicant_image,
