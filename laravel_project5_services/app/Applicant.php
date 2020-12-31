@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Applicant extends Model
 {
 protected $primaryKey ="applicant_id";
-    public function category():
+    public function category()
     {
         return $this->belongsTo("App\Category");
     }

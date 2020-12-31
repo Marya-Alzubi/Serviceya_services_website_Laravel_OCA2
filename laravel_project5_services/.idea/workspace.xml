@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/applicants/category1_applicants_table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Additional_image.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Applicant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/create_applicant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/create_applicant.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +161,7 @@
       <updated>1609293398281</updated>
       <workItem from="1609293399818" duration="579000" />
       <workItem from="1609294026418" duration="7975000" />
-      <workItem from="1609318867380" duration="46561000" />
+      <workItem from="1609318867380" duration="46931000" />
     </task>
     <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
       <created>1609409802498</created>

@@ -28,7 +28,7 @@ Route::get('/applicants/create', 'applicantController@create');// show the form
 Route::POST('/applicants', 'applicantController@store');       //  insert into form [action=""]
 ////////////
 Route::get('/applicants', 'applicantController@index');        // applicants table
-Route::get('/category1/applicants', 'applicantController@category1_index');        // applicants table
+Route::get('/category1/applicants', 'applicantController@category1_index');        // category1 applicants table
 
 
 ////////////////// auth
