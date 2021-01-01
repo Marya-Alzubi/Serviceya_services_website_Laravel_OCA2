@@ -31,7 +31,7 @@
                 <td>{{$applicant->applicant_email}}</td>
                 <td>{{$applicant->applicant_mobile}}</td>
                 <td>{{$applicant->applicant_city}}</td>
-                <td>category name</td>
+                <td>{{$applicant->category->cat_name}}</td>
                 <td>{{$applicant->applicant_desc}}</td>
                 <td>{{$applicant->applicant_subscription_type}}</td>
                 <td><img width="200" height="200" src="{{asset("applicant_images/$applicant->applicant_education_img")}}"></td>

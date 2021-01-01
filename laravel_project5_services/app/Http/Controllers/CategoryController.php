@@ -8,15 +8,28 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+//  public function test(){
+//     $category = Category::find(2);
+//     $y= $category->applicants;
+//     foreach($y as $key => $val){
+//         echo "<br>";
+//        return  $val->applicant_name;
+
+//     };
+//  }
     public function index()
     {
 //        $categories = Category::all();
-        $categories = Category::orderByDesc('cat_id')->get();
+        $categories = Category::orderByDesc('id')->get();
         return view("dashboard.categories.create_category", compact("categories"));
     }
 
@@ -62,10 +75,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
-    {
-        //
-    }
+//    public function show(Category $category)
+//    {
+//        //
+//    }
 
     /**
      * Show the form for editing the specified resource.
@@ -121,4 +134,45 @@ class CategoryController extends Controller
         Category::findOrFail($id)->delete();
         return redirect("/categories");
     }
+
+    public function showCat(Category $category)
+    {
+        $categories = Category::all();
+
+        return view('web.index',compact('categories'));
+    }
+
+
+
+    public function singlecategory(Category $category, $id)
+    {
+        $applicants = Category::find($id);
+        $specific_applicants= $applicants->applicants;
+        // return $specific_applicants;
+
+        return view('web.singlecategory',compact('specific_applicants'));
+
+    }
+    public function choose_category_form()
+    {
+        $categories = Category::all();
+            return view('dashboard.categories.choose_category_form',compact('categories'));
+
+    }
+    public function single_category_table($id)
+    {
+        $applicants =Category::find($id)->applicants;
+            return view('dashboard.categories.single_category_table',compact('applicants'));
+
+    }
+///testing, list all applicants that has category id equals 1
+// public function testing()
+// {
+//     $applicants = Category::find(1);
+//     $specific_applicants= $applicants->applicants;
+//     // return $specific_applicants;
+//     return view('','');
+//     }
+
+
 }

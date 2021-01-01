@@ -2,8 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/admin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/accept_applicant/accepted_choose_category_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/accept_applicant/accepted_single_applicant_page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/accept_applicant/accepted_single_category_table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/choose_category_form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/web/singleapplicant.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/web/singlecategory.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel_project5_service_version3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel_project5_service_version3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Applicant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Applicant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdditionalImageController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_30_022000_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_30_022000_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_30_134320_create_admin_roles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_30_205734_create_additional_images_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/images/call-to-action.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/images/call-to-action.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admin.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/applicants/category1_applicants_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/category1_applicants_table_backup.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/create_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/create_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/edit_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/edit_category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/test.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/web/create_applicant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/create_applicant.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/web/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/carbon.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/carbon.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/php-parse.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/phpunit.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/phpunit.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/psysh.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/psysh.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server.bat" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bin/var-dump-server.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/filp/whoops/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fzaninotto/faker/.travis/xdebug.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fzaninotto/faker/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/mockery/mockery/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/opis/closure/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phar-io/version/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psy/psysh/.phan/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psy/psysh/test/fixtures/default/.local/share/psysh/php_manual.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ramsey/uuid/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/debug/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/deprecation-contracts/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/error-handler/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client-contracts/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/mime/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/service-contracts/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation-contracts/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/theseer/tokenizer/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/webmozart/assert/CHANGELOG.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +203,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/dashboard/applicants" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../edwin-udemy/edwin_registration_crud_with_database" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -141,8 +219,9 @@
       <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\web" />
       <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard\categories" />
+      <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\dashboard\admins" />
+      <recent name="C:\xampp\htdocs\laravel\project5\oca_projects_project5_laravel\laravel_project5_services\resources\views\web" />
     </key>
   </component>
   <component name="RunManager">
@@ -162,6 +241,10 @@
       <workItem from="1609293399818" duration="579000" />
       <workItem from="1609294026418" duration="7975000" />
       <workItem from="1609318867380" duration="46931000" />
+      <workItem from="1609425702281" duration="6940000" />
+      <workItem from="1609438272154" duration="299000" />
+      <workItem from="1609438741257" duration="18394000" />
+      <workItem from="1609469868772" duration="13112000" />
     </task>
     <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
       <created>1609409802498</created>
@@ -186,6 +269,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama" />

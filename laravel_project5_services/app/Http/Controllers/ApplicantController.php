@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Applicant;
 use App\Category;
+use App\Http\Requests\createApplicantRequest;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
@@ -25,7 +26,7 @@ class ApplicantController extends Controller
     }
     public function category1_index()
     {
- $applicants = Applicant::where('cat_id', "1")->get();
+ $applicants = Applicant::where('category_id', "1")->get();
 return view("dashboard/applicants/category1_applicants_table", compact("applicants"));
 
     }
@@ -55,7 +56,7 @@ return view("dashboard/applicants/category1_applicants_table", compact("applican
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(createApplicantRequest $request)
     {
         if ($request->hasFile('applicant_education_img')) {
             $file = $request->file('applicant_education_img') ;
@@ -79,7 +80,7 @@ return view("dashboard/applicants/category1_applicants_table", compact("applican
             "applicant_email"                   =>$request->applicant_email,
             "applicant_mobile"                  =>$request->applicant_mobile,
             "applicant_city"                    =>$request->applicant_city,
-            "cat_id"                            =>$request->applicant_service_id,
+            "category_id"                       =>$request->x,
 //          "applicant_service_id"              =>$request->applicant_service_id,
             "applicant_desc"                    =>$request->applicant_desc,
             "applicant_subscription_type"       =>$request->applicant_subscription_type,
@@ -96,10 +97,24 @@ return view("dashboard/applicants/category1_applicants_table", compact("applican
      * @param  \App\Applicant  $applicant
      * @return \Illuminate\Http\Response
      */
-    public function show(Applicant $applicant)
+    public function show(Applicant $applicant, $id)
     {
-        //
+        //show all applicants per service, that they do this servce, $id = id_category
+        // $applict_service = Applicant::where('',$id)->get();
+        // $categories = Category::where("id",$id)->get();
+        $applicants = Applicant::where('applicant_service', 'id')->get();
+        return view('singlecategory',compact('applicants'));
     }
+
+    public function show_applicant($id)
+    {
+        // return "GOT YAA";
+        $single_applicant = Applicant::find($id);
+//    dd($single_applicant);
+        return view('web.singleapplicant',compact('single_applicant'));
+
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -119,7 +134,7 @@ return view("dashboard/applicants/category1_applicants_table", compact("applican
      * @param  \App\Applicant  $applicant
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Applicant $applicant)
+    public function update(createApplicantRequest $request, Applicant $applicant)
     {
         //
     }
@@ -134,4 +149,8 @@ return view("dashboard/applicants/category1_applicants_table", compact("applican
     {
         //
     }
+
 }
+
+
+

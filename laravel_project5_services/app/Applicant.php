@@ -10,20 +10,23 @@ class Applicant extends Model
 protected $primaryKey ="applicant_id";
     public function category()
     {
-        return $this->belongsTo("App\Category");
+        return $this->belongsTo(Category::class);
     }
 
 
-    protected $fillable = [
-        "applicant_name",
-        "applicant_email"  ,
-        "applicant_mobile" ,
-        "applicant_city" ,
-        "cat_id" ,
-        "applicant_desc",
-        "applicant_subscription_type" ,
-            "applicant_image" ,
-        "applicant_education_img" ,
-    ];
+    protected $guarded = [];
+//    protected $fillable = [
+//        "applicant_name",
+//        "applicant_email"  ,
+//        "applicant_mobile" ,
+//        "applicant_city" ,
+//        "category_id" ,
+//        "applicant_image" ,
+//        "applicant_desc",
+//        "applicant_subscription_type" ,
+//        "applicant_education_img" ,
+//    ];
+
+
 
 }
