@@ -21,7 +21,7 @@
 
             <div class="author text-center"  style="background-image:url('./main/images/BG.png');">
                 <a href="#">
-                    <img class="avatar border-gray" src='{{asset("images/$single_applicant->applicant_name")}}'   alt="...">
+                    <img class="avatar border-gray" src='{{asset("applicant_images/$single_applicant->applicant_image")}}'   alt="...">
                 </a>
 
             </div>
@@ -40,11 +40,12 @@
                             <p class="card-text">{{$single_applicant->applicant_desc}}</p>
                             <p class="card-text">{{$single_applicant->applicant_desc}}</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
-                          </div>
-                </div>
-            </div> <!-- row -->
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div>
+
         </div>
-    </div>
 
 
 
@@ -57,8 +58,3 @@
 
 
 @endsection
-
-
-
-
-
