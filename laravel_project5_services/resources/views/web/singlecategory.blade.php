@@ -2,15 +2,6 @@
 @section('main')
 
 
-
-    {{-- <li>
-        {{$applicants->applicant_name}}
-    </li> --}}
-
-
-
-
-
  <section id="service" class="services-area">
     <div class="container">
       <div class="row justify-content-center">
@@ -18,10 +9,11 @@
             <div class="col-lg-4 col-md-7 col-sm-9">
                 <div class="single-pricing mt-40">
                     <div class="text-center">
-                         <img src="{{asset("images/$applicants->applicant_name")}}" class="rounded" alt="...">
+                         <img src='{{asset("images/$applicants->applicant_name")}}' class="rounded" alt="...">
                      </div>
                       <div class="pricing-header text-center">
                           <h4> {{$applicants->applicant_name}}</h4>
+
                       </div>
 
                    {{-- {{$categories->cat_desc}} --}}

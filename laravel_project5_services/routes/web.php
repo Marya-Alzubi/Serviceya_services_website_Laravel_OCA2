@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hi', function () {
-    return view('dashboard.admin');
-});
+// Route::get('/hi', function () {
+//     return view('dashboard.admin');
+// });
 
-Route::get('/haaa', function () {
-    return view('web.index');
-});
+// Route::get('/haaa', function () {
+//     return view('web.index');
+// });
 
 Route::get('categories', function () {
     return view('/dashboard/category');

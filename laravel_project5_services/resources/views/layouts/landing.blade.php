@@ -160,7 +160,16 @@
                             </ul>
                         </div> <!-- footer link -->
                     </div>
-                   
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <div class="footer-link">
+                          <div class="container">
+                              <div class="row row-cols-2">
+                                <div class="col"><img src="{{URL::asset('main/images/visa.png')}}" class="rounded" alt="..."></div>
+                       
+                              </div>
+                          </div>
+                        </div> 
+                    </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- footer widget -->
@@ -170,7 +179,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright text-center">
-                            <p class="text">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a> - UI Powered by <a el="nofollow" href="https://rebrand.ly/ayroui">AyroUI</a></p>
                         </div>
                     </div>
                 </div> <!-- row -->

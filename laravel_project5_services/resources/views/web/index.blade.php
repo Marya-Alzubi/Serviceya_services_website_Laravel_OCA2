@@ -4,23 +4,26 @@
 
 
 <div id="home" class="header-hero bg_cover" style="background-image: url({{URL::asset('main/images/header-bg.png')}})">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10">
-                        <div class="header-content text-center">
-                            <h3 class="header-title">Handcrafted Landing </h3>
-                            <p class="text"> closer to launch!</p>
-                            <ul class="header-btn">
-                                <li><a class="main-btn btn-one" href="#">GET IN TOUCH</a></li>
-                                <li><a class="main-btn btn-one" href="#">GET IN TOUCH</a></li>
-                            </ul>
-                        </div> <!-- header content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div class="header-shape">
-                <img src="{{URL::asset('main/images/header-shape.svg')}}" alt="shape">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10">
+                <div class="header-content text-center">
+                    <h3 class="header-title">
+                    <br>
+                    Let's get to work!
+                    </h3>
+
+                    <ul class="header-btn">
+                        <li><a class="main-btn btn-one" href="#">Login</a></li>
+                        <li><a class="main-btn btn-one" href="#">Sign Up</a></li>
+                    </ul>
+                </div> <!-- header content -->
             </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="header-shape">
+        <img src="{{URL::asset('main/images/header-shape.svg')}}" alt="shape">
+    </div>
 </div>
 <!-- header content -->
 
@@ -63,23 +66,28 @@
 
      <!--====== About Us ======-->
 
-    <section id="AboutUs" class="call-to-action">
-    <div class="call-action-image">
-            <img src="{{URL::asset('main/images/call-to-action.png')}}" alt="call-to-action">
-        </div>
+     <section id="AboutUs" class="call-to-action">
+        <div class="call-action-image">
+                <img src="{{URL::asset('main/images/call-to-action.png')}}" alt="call-to-action">
+            </div>
 
-        <div class="container-fluid">
-            <div class="row justify-content-end">
-                <div class="col-lg-6">
-                    <div class="call-action-content text-center">
-                        <h2 class="call-title">Curious to Learn More? Stay Tuned</h2>
-                        <p class="text">Carers App is a technology platform supported by a smart system for improving the quality of in-home care services. By providing a professional, secure and customized service based on users' needs, we maintained connectivity and commitment between care providers and users with just a click.
-Our mission is to care for people by finding solutions to maintain family bonding and deliver a fast secure short and long term care services. We always seek to provide commitment and build trust foundations.</p>
-                    </div> <!-- slider-content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            <div class="container-fluid">
+                <div class="row justify-content-end">
+                    <div class="col-lg-6">
+                        <div class="call-action-content text-center">
+                            <h2 class="call-title">Curious to Learn More? Stay Tuned</h2>
+                            <p class="text">Serviceya is a technology platform supported by
+                            a smart system for improving the quality of in-home care services. By providing a professional,
+                            secure and customized service based on users' needs, we maintained connectivity and commitment
+                            between care providers and users with just a click.
+                            Our mission is to care for people by finding solutions to
+                            maintain family bonding and deliver a fast secure short and long
+                            term care services. We always seek to provide commitment and build trust foundations.</p>
+                        </div> <!-- slider-content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section>
 
     <!--====== CALL TO ACTION PART ENDS ======-->
 
