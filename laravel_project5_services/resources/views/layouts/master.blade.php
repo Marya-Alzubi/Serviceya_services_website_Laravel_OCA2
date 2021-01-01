@@ -43,6 +43,12 @@
                          </a>
                      </li>
                      <li>
+                        <a class="nav-link" href="{{URL::asset('choose_category_form')}}">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Choose Category</p>
+                        </a>
+                    </li>
+                     {{-- <li>
                          <a class="nav-link" href="{{URL::asset('House_Cleaning')}}">
                          <i class="nc-icon nc-paper-2"></i>
                              <p>User House Cleaning </p>
@@ -59,7 +65,7 @@
                          <i class="nc-icon nc-paper-2"></i>
                              <p>User Childcare</p>
                          </a>
-                     </li>
+                     </li> --}}
 
 
                  </ul>
@@ -106,7 +112,7 @@
 
                      </div>
                  </div>
-             <footer class="footer">
+             {{-- <footer class="footer">
                  <div class="container-fluid">
                      <nav>
 
@@ -119,7 +125,7 @@
                          </p>
                      </nav>
                  </div>
-             </footer>
+             </footer> --}}
          </div>
      </div>
 

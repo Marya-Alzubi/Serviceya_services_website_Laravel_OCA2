@@ -156,15 +156,19 @@ class CategoryController extends Controller
     public function choose_category_form()
     {
         $categories = Category::all();
-            return view('dashboard.categories.choose_category_form',compact('categories'));
+        // dd($categories);
+        return view('dashboard.categories.choose_category_form',compact('categories'));
 
     }
-    public function single_category_table($id)
+    public function single_category_table(Request $request)
     {
-        $applicants =Category::find($id)->applicants;
-            return view('dashboard.categories.single_category_table',compact('applicants'));
-
+        $select_category = $request->select_category;
+        $applicants =Category::find($select_category);
+        $category_all_applicants=$applicants->applicants;
+        return view('dashboard.categories.single_category_table',compact('category_all_applicants'));
     }
+
+
 ///testing, list all applicants that has category id equals 1
 // public function testing()
 // {
@@ -174,5 +178,6 @@ class CategoryController extends Controller
 //     return view('','');
 //     }
 
+     
 
 }

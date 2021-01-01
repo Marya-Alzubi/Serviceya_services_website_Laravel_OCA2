@@ -28,10 +28,11 @@ route::get('/',function (){
 Route::resource("/categories", "categoryController");                          // crud category
 Route::get('/applicants', 'applicantController@index');                        // applicants table
 
+//single
+
 
 //Single page applicant
 Route::get('singleapplicant/{id}','ApplicantController@show_applicant')->name('singleapplicant');  // single applicant page
-Route::get('singleapplicant','ApplicantController@show_applicant ');                               // it does not work
 
 
 ////////////////// Main Website Routes
@@ -39,10 +40,14 @@ Route::get('singleapplicant','ApplicantController@show_applicant ');            
 Route::get('/landing_page','CategoryController@showCat');                       // landing page
 Route::get('singleservice/{id}','CategoryController@singlecategory');           // applicant gallery view for each category
 
+//Single page applicant
+Route::get('singleapplicant/{id}','ApplicantController@show_applicant')->name('singleapplicant');  // single applicant page
+
+
 // to show applicant form
 //Route::resource("/applicants", "applicantController");
-Route::get('/applicants/create', 'applicantController@create');// show the form
-Route::POST('/applicants', 'applicantController@store');       //  insert into form [action=""]
+Route::get('/applicants/create', 'ApplicantController@create');     // show the form
+Route::POST('/applicants', 'ApplicantController@store');            //  insert into form [action=""]
 
 ////////////////// auth
 Auth::routes();
@@ -57,9 +62,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 /* start
+//******* /1/2020*********/
+Route::get('/choose_category_form', 'CategoryController@choose_category_form');    // choose category form
+Route::post('/single_category_table', 'categoryController@single_category_table');    // choose category form
 //******* 1/1/2020*********//
-Route::get('/choose_category_form', 'categoryController@choose_category_form');    // choose category form
-Route::get('/single_category_table/{id}', 'categoryController@single_category_table');    // choose category form
-//******* 1/1/2020*********//
-//
-//* end
+
+//Friday Work
+//this route goes to single applicant page dashboard
+Route::get('pending_request/{id}','ApplicantController@pending_request');
+

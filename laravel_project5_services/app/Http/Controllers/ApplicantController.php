@@ -14,41 +14,32 @@ class ApplicantController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    //this method to view all applicants in one table in the admin dashboard
     public function index()
     {
         $applicants = Applicant::orderByDesc('applicant_id')->get();
         $categories =Category::all();
         return view("dashboard/applicants/applicants_table", compact("applicants","categories"));
-
-// $applicants = Applicant::where('applicant_service', "Health care")->get();
-//return view("dashboard/applicants/applicants_table", compact("applicants"));
-
     }
-//    public function category1_index()
-//    {
-// $applicants = Applicant::where('category_id', "1")->get();
-//return view("dashboard/applicants/category1_applicants_table", compact("applicants"));
-//
-//    }
+
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    //Go to the applicant form page in the public website to register
     public function create()
     {
-        //hana solution
-//        $categories =Category::select('cat_id','cat_name')->get();
         $categories =Category::all();
         return view("web/create_applicant",compact('categories'));
     }
 
-    // show without fetch any data
-//    public function create()
-//    {
-//        return view("web/create_applicant", compact('categories'));
-//    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -56,7 +47,7 @@ class ApplicantController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(createApplicantRequest $request)
+    public function store(Request $request)
     {
         if ($request->hasFile('applicant_education_img')) {
             $file = $request->file('applicant_education_img') ;
@@ -74,21 +65,20 @@ class ApplicantController extends Controller
             $applicant_image = "defaultImage.png";
         }
 
-
         Applicant::create( [
             "applicant_name"                    =>$request->applicant_name,
             "applicant_email"                   =>$request->applicant_email,
             "applicant_mobile"                  =>$request->applicant_mobile,
             "applicant_city"                    =>$request->applicant_city,
             "category_id"                       =>$request->x,
-//          "applicant_service_id"              =>$request->applicant_service_id,
             "applicant_desc"                    =>$request->applicant_desc,
             "applicant_subscription_type"       =>$request->applicant_subscription_type,
             "applicant_image"                   =>$applicant_image,
             "applicant_education_img"           => $filename ,
         ]);
-//        return redirect("/applicants");
-        return redirect("/applicants/create");
+          //return redirect("/applicants");
+          //return redirect("/applicants/create");
+          return "Welcome, You are in ";
     }
 
     /**
@@ -97,23 +87,54 @@ class ApplicantController extends Controller
      * @param  \App\Applicant  $applicant
      * @return \Illuminate\Http\Response
      */
-    public function show(Applicant $applicant, $id)
-    {
-        //show all applicants per service, that they do this servce, $id = id_category
-        // $applict_service = Applicant::where('',$id)->get();
-        // $categories = Category::where("id",$id)->get();
-        $applicants = Applicant::where('applicant_service', 'id')->get();
-        return view('singlecategory',compact('applicants'));
-    }
 
+
+    //Single applicant profile when click the user on his card in the singlecategory page
     public function show_applicant($id)
     {
-        // return "GOT YAA";
+        //return "GOT YAA";
         $single_applicant = Applicant::find($id);
-//    dd($single_applicant);
+        //dd($single_applicant);
         return view('web.singleapplicant',compact('single_applicant'));
-
     }
+
+      //////Applicant Related to the admin dashboard
+      public function pending_request($id)
+     {
+        $single_applicant = Applicant::find($id);
+        return view('dashboard.categories.pending_request',compact('single_applicant'));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**

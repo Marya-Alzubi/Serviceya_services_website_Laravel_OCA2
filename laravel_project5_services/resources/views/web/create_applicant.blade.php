@@ -79,8 +79,8 @@
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
                                             <select class="custom-select form-group" name="x" id="">
+                                                <option selected>Select your Service: </option>
                                                 @foreach($categories as $category)
-                                                    <option selected>Select your Service: </option>
                                                     <option value="{{$category->id}}">{{$category->cat_name}} </option>
                                                 @endforeach
                                             </select>
@@ -156,7 +156,10 @@
 
                                 <div class="col-md-12">
                                     <div class="single-form form-group text-center">
-                                        <button type="submit_applicant" name="submit" class="main-btn">Submit</button>
+                                        <button type="submit" name="submit" class="main-btn">Submit</button>
+
+                                        {{-- the type must be button --}}
+                                        {{-- <button type="button" name="submit_applicant" class="main-btn">Submit</button> --}}
                                     </div> <!-- single form -->
                                 </div>
 
