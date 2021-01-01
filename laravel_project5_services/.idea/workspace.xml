@@ -6854,6 +6854,16 @@
       <change beforePath="$PROJECT_DIR$/../../laravel_project5_services/vendor/webmozart/assert/src/Assert.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../laravel_project5_services/vendor/webmozart/assert/src/Mixin.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../laravel_project5_services/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/oca_projects_project5_laravel.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/createCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createCategoryRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_210203_create_applicants_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -6872,7 +6882,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -7018,6 +7028,7 @@
       <workItem from="1609438741257" duration="18394000" />
       <workItem from="1609469868772" duration="13517000" />
       <workItem from="1609523262382" duration="97000" />
+      <workItem from="1609523875219" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
       <created>1609409802498</created>

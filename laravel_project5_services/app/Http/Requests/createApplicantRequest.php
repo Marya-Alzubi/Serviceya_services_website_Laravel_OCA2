@@ -32,7 +32,7 @@ class createApplicantRequest extends FormRequest
             "applicant_city"                => "required ",
             'applicant_image'               =>' mimes:jpeg,jpg,png,gifmax:10000', // becouse of default image in controller the required validation will not be need
             "applicant_desc"                => "required | min:10 | max:200",
-            'applicant_education_img'       =>' mimes:jpeg,jpg,png,gifmax:10000', // becouse of default image in controller the required validation will not be need
+            'applicant_education_img'       =>' required | mimes:jpeg,jpg,png,gifmax:10000', // becouse of default image in controller the required validation will not be need
             "applicant_subscription_type"   => "required ",
 
         ];

@@ -48,7 +48,7 @@ class ApplicantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {                    //replace Request to  createApplicantRequest  to validate the form
         if ($request->hasFile('applicant_education_img')) {
             $file = $request->file('applicant_education_img') ;
             $ext = $file->getClientOriginalExtension() ;
@@ -78,7 +78,8 @@ class ApplicantController extends Controller
         ]);
           //return redirect("/applicants");
           //return redirect("/applicants/create");
-          return "Welcome, You are in ";
+        return back();
+//          return "Welcome, You are in ";
     }
 
     /**
