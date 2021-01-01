@@ -27,9 +27,8 @@ route::get('/',function (){
 //////////// dashboard Category and Applicant
 Route::resource("/categories", "categoryController");                          // crud category
 Route::get('/applicants', 'applicantController@index');                        // applicants table
-Route::get('/category1/applicants', 'applicantController@category1_index');    // category1 applicants table
-Route::get('/choose_category_form', 'categoryController@choose_category_form');    // choose category form
-Route::get('/single_category_table/{id}', 'categoryController@single_category_table');    // choose category form
+
+
 //Single page applicant
 Route::get('singleapplicant/{id}','ApplicantController@show_applicant')->name('singleapplicant');  // single applicant page
 Route::get('singleapplicant','ApplicantController@show_applicant ');                               // it does not work
@@ -53,3 +52,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('test','CategoryController@test');
 //Route::get('test2','ApplicantController@test');
 //Route::get('testing','categoryController@testing');
+
+
+
+
+/* start
+//******* 1/1/2020*********//
+Route::get('/choose_category_form', 'categoryController@choose_category_form');    // choose category form
+Route::get('/single_category_table/{id}', 'categoryController@single_category_table');    // choose category form
+//******* 1/1/2020*********//
+//
+//* end

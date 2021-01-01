@@ -24,12 +24,12 @@ class ApplicantController extends Controller
 //return view("dashboard/applicants/applicants_table", compact("applicants"));
 
     }
-    public function category1_index()
-    {
- $applicants = Applicant::where('category_id', "1")->get();
-return view("dashboard/applicants/category1_applicants_table", compact("applicants"));
-
-    }
+//    public function category1_index()
+//    {
+// $applicants = Applicant::where('category_id', "1")->get();
+//return view("dashboard/applicants/category1_applicants_table", compact("applicants"));
+//
+//    }
 
     /**
      * Show the form for creating a new resource.
