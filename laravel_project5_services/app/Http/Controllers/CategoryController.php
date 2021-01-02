@@ -33,6 +33,7 @@ class CategoryController extends Controller
         return view("dashboard.categories.crud.create_category", compact("categories"));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,8 +63,8 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-        return redirect("/categories")->with('status_store', 'new category has been created successfully');
-
+//        return redirect("/categories")->with('status_store', 'new category has been created successfully');
+        return redirect("/landing_page");
         // this method will not be effective in uploading image
 //        Category::create($request->all());
 //        return redirect("/categories" );
@@ -139,7 +140,8 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return view('web.index',compact('categories'));
+//        return view('web.view_all_categories',compact('categories'));
+ return view('web.index',compact('categories'));
     }
 
 

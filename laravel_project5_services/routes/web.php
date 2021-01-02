@@ -14,7 +14,7 @@
 
 ////////////////// Main Website Routes
 //Landing Page to show categories
-Route::get('/','CategoryController@showCat');    // landing page
+Route::get('/landing_page','CategoryController@showCat');    // landing page
 Route::get('singleservice/{id}','CategoryController@singlecategory'); // lm tazbot mana          // applicants gallery view for each category
 
 //Single page foreach applicant
@@ -39,9 +39,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // it is does not work maybe because the disabled dashboard
-route::get('/dashboard',function (){
+route::get('/',function (){
     if(Auth::check())
-        return view('/dashboard.index_dashboard');
+        return view('/dashboard/index_dashboard');
     else
         return view('Auth/login');
 });

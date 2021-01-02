@@ -6,7 +6,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-10">
-                        <h4 class="title">Creating a new account</h4>
+                        <h4 class="title">Join Us Now  </h4>
+                        <br>
+                        <h5 >It takes few minutes!  </h5>
                         <br>
                         <br>
                     </div> <!-- section title -->
@@ -85,8 +87,8 @@
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
                                         <label> Select your Service:</label>
-                                            <select class="custom-select form-group" name="category_id" id="" value="{{old('category_id')}}>
-{{--                                                <option selected> Select your Service: </option>--}}
+                                            <select class="custom-select form-group" name="category_id" id="" >
+{{--                                                <option selected > Select your Service: </option>--}}
                                                 @foreach($categories as $category)
                                                     <option value="{{$category->id}}">{{$category->cat_name}} </option>
                                                 @endforeach
