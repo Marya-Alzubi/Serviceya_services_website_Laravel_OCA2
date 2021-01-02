@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +169,7 @@
       <workItem from="1609556148386" duration="78000" />
       <workItem from="1609556287790" duration="501000" />
       <workItem from="1609556808631" duration="20769000" />
-      <workItem from="1609585354482" duration="1388000" />
+      <workItem from="1609585354482" duration="2020000" />
     </task>
     <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
       <created>1609409802498</created>
