@@ -75,7 +75,7 @@
                         </nav>
                          <!-- navbar -->
                     </div>
-                </div> 
+                </div>
                 <!-- row -->
             </div>
              <!-- container -->
@@ -85,15 +85,15 @@
 
 
          @yield('header_content')
-         
-        
-         
+
+
+
     </header>
 
     <!--====== HEADER PART ENDS ======-->
     <section id="service" class="services-area">
         <div class="container">
-            
+
 
 
 
@@ -101,11 +101,11 @@
       @yield('main')
 
 
-      </div> 
-       
+      </div>
+
        </section>
-   
-   
+
+
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer-area">
@@ -124,7 +124,7 @@
                                     <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
                                 </ul>
                             </div> <!-- footer logo -->
-                            
+
                         </div> <!-- footer logo support -->
                     </div>
                 </div> <!-- row -->
@@ -171,15 +171,15 @@
                           <div class="container">
                               <div class="row row-cols-2">
                                 <div class="col"><img src="{{URL::asset('main/images/visa.png')}}" class="rounded" alt="..."></div>
-                       
+
                               </div>
                           </div>
-                        </div> 
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- footer widget -->
-        
+
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
@@ -227,6 +227,32 @@
     <!--====== Main js ======-->
     <script src="{{URL::asset('main/js/main.js')}}"></script>
 
-</body>
 
+    {{-- Marya code for pop up  --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        @if(session('status_store'))
+        swal({
+            title: "{{session('status_store')}}",
+            icon: "success",
+            {{--icon: "{{session('statuscode')}}",--}}
+            button: "ok",
+        });
+        @endif
+        @if(session('status_update'))
+        swal({
+            title: "{{session('status_update')}}",
+            icon: "success",
+            button: "ok",
+        });
+        @endif
+        @if(session('status_destroy'))
+        swal({
+            title: "{{session('status_destroy')}}",
+            icon: "error",
+            button: "ok",
+        });
+        @endif
+    </script>
+</body>
 </html>

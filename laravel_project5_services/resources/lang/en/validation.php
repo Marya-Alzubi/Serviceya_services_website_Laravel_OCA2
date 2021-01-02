@@ -128,11 +128,60 @@ return [
     |
     */
 
-    'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+    // 'custom' => [
+    //     'attribute-name' => [
+    //         'rule-name' => 'custom-message',
+    //     ],
+    // ],
+
+
+    'custom'               => [
+        'cat_name'         => [
+            'required'     => 'the name field is required .',
+            'max'          => 'the name field must not be greater than 20 characters.',
+            'unique'          => 'The name has already been taken.',
+        ],
+        'cat_desc'         => [
+            'required'     => 'the description field is required .',
+            'min'          => 'the description field must be between (20-200) characters.',
+            'max'          => 'the description field must be between (20-200) characters.',
+        ],
+        'cat_image'        => [
+            'required'     => 'category image is required .',
+            'mimes'        => 'category image must be jpeg,jpg,png or gif .',
+        ],
+        'applicant_name'   => [
+            'required'     => 'the name field is required .',
+        ],
+        'applicant_email'  => [
+            'required'     => 'the email field is required .',
+            'email'        => 'please include an "@" in the email address.',
+            'unique'          => 'The email has already been taken.',
+        ],
+        'applicant_mobile' => [
+            'required'     => 'the mobile number field is required .',
+            'digits'       => 'the mobile number field must be 10 digits .',
+        ],
+        'applicant_city'   => [
+            'required'     => 'the city field is required .',
+        ],
+        'applicant_image'  => [
+            'mimes'        => 'applicant image must be jpeg,jpg,png or gif .',
+        ],
+        'applicant_desc'   => [
+            'required'     => 'the description field is required .',
+            'min'          => 'the description field must be between (20-200) characters.',
+            'max'          => 'the description field must be between (20-200) characters.',
+        ],
+        'applicant_education_img' => [
+            'required'     => 'educational degree image is required .',
+            'mimes'        => 'educational degree image must be jpeg,jpg,png or gif .',
+        ],
+        'applicant_subscription_type' => [
+            'required'     => 'the subscription type is required .',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

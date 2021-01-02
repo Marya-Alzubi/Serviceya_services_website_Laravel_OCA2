@@ -62,7 +62,7 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-        return redirect("/categories");
+        return redirect("/categories")->with('status_store', 'new category has been created successfully');
 
         // this method will not be effective in uploading image
 //        Category::create($request->all());
@@ -115,7 +115,7 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-        return redirect("/categories");
+        return redirect("/categories")->with('status_update', 'new category has been edited successfully');
 
 // this method will not be effective in uploading image
 //        $category = Category::findOrFail($id);
@@ -132,7 +132,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::findOrFail($id)->delete();
-        return redirect("/categories");
+        return redirect("/categories")->with('status_destroy', 'new category has been deleted successfully');
     }
 
     public function showCat(Category $category)
@@ -178,6 +178,6 @@ class CategoryController extends Controller
 //     return view('','');
 //     }
 
-     
+
 
 }

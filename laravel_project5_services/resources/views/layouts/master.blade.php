@@ -43,9 +43,9 @@
                          </a>
                      </li>
                      <li>
-                        <a class="nav-link" href="{{URL::asset('choose_category_form')}}">
+                        <a class="nav-link" href="{{URL::asset('pending')}}">
                             <i class="nc-icon nc-notes"></i>
-                            <p>Choose Category</p>
+                            <p>Pending Requests</p>
                         </a>
                     </li>
                      {{-- <li>
@@ -146,4 +146,30 @@
  <script src="{{URL::asset('./dashboard/js/demo.js')}}"></script>
 
 
- </html>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script>
+     @if(session('status_store'))
+     swal({
+         title: "{{session('status_store')}}",
+         icon: "success",
+         {{--icon: "{{session('statuscode')}}",--}}
+         button: "ok",
+     });
+     @endif
+     @if(session('status_update'))
+     swal({
+         title: "{{session('status_update')}}",
+         icon: "success",
+         button: "ok",
+     });
+     @endif
+     @if(session('status_destroy'))
+     swal({
+         title: "{{session('status_destroy')}}",
+         icon: "error",
+         button: "ok",
+     });
+     @endif
+ </script>
+
+</html>

@@ -22,19 +22,19 @@ class createApplicantRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
-        return [
-            'applicant_name'                =>['required' , new FullName()],
-            'cat_desc'                      =>"required",
-            "applicant_email"               => "required | email",
-            "applicant_mobile"              => "required |digits:10|numeric",
-            "applicant_city"                => "required ",
-            'applicant_image'               =>' mimes:jpeg,jpg,png,gifmax:10000', // becouse of default image in controller the required validation will not be need
-            "applicant_desc"                => "required | min:10 | max:200",
-            'applicant_education_img'       =>' mimes:jpeg,jpg,png,gifmax:10000', // becouse of default image in controller the required validation will not be need
-            "applicant_subscription_type"   => "required ",
 
-        ];
-    }
+    public function rules()
+{
+    return [
+        'pending_name'                =>['required' , new FullName()],
+        "pending_email"               => "required|unique:applicants|email",
+        "pending_mobile"              => "required |digits:10|numeric",
+        "pending_city"                => "required ",
+        'pending_image'               =>' mimes:jpeg,jpg,png,gif max:10000', // becouse of default image in controller the required validation will not be need
+        "pending_desc"                => "required | min:20 | max:200",
+        'pending_education_img'       =>' required | mimes:jpeg,jpg,png,gif max:10000', // becouse of default image in controller the required validation will not be need
+        "pending_subscription_type"   => "required",
+    ];
+}
+
 }

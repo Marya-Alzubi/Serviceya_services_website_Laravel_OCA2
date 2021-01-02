@@ -46,8 +46,8 @@ Route::get('singleapplicant/{id}','ApplicantController@show_applicant')->name('s
 
 // to show applicant form
 //Route::resource("/applicants", "applicantController");
-Route::get('/applicants/create', 'ApplicantController@create');     // show the form
-Route::POST('/applicants', 'ApplicantController@store');            //  insert into form [action=""]
+// Route::get('/applicants/create', 'ApplicantController@create');     // show the form, commented to put route for pending
+// Route::POST('/applicants', 'ApplicantController@store');            //  insert into form [action=""]
 
 ////////////////// auth
 Auth::routes();
@@ -71,3 +71,21 @@ Route::post('/single_category_table', 'categoryController@single_category_table'
 //this route goes to single applicant page dashboard
 Route::get('pending_request/{id}','ApplicantController@pending_request');
 
+
+
+//Pending Requests Routes, from register form, post request
+Route::get('/applicants/create','PendingRequestController@create');
+Route::post('/applicants','PendingRequestController@store');
+
+
+//this will be shown when admin click on Pending Request Page in the left side
+Route::get('pending','PendingRequestController@show');
+Route::get('singlepending/{id}','PendingRequestController@singlepending');
+
+Route::get('singlepending/{id}','PendingRequestController@singlepending');
+
+
+//
+Route::get('/add_to_applicant/{id}','ApplicantController@Add_to_applicant');
+Route::get('/add_to_rejected/{id}','RejectedController@Add_to_rejected');
+// Route::get('/add_to_rejected/{id}','PendingRequestController@destroy');

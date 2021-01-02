@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Pending_request;
 use App\Applicant;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +18,10 @@ class Category extends Model
         "cat_name",
         "cat_image"
     ];
+
+    public function pendingrequests()
+    {
+        return $this->hasMany(Applicant::class);
+    }
 
 }
