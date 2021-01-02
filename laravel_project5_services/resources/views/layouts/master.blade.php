@@ -48,11 +48,6 @@
                             <p>Pending Requests</p>
                         </a>
                     </li>
-                     @auth
-                     <li>
-                         <p>{{auth()->user()->name}}</p>
-                    </li>
-                     @endauth
 
                      {{-- <li>
                          <a class="nav-link" href="{{URL::asset('House_Cleaning')}}">
@@ -87,7 +82,6 @@
 
                          <ul class="navbar-nav ml-auto">
                              <li class="nav-item">
-
                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                      <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -99,9 +93,16 @@
                                          @csrf
                                      </form>
                                  </div>
+                                 <a class="nav-link" href="#">
+                                 @auth
+                                     <span class="no-icon"> Hello {{auth()->user()->name}} </span>
+                                 @endauth
+                                 </a>
+                                     <a class="nav-link" href="#">
                                  @auth()
                                      <span class="no-icon">Log out</span>
                                  @endauth
+                                     </a>
 {{--                                                                          <span class="no-icon">--}}
 
 {{--                                                                              @if (session('status'))--}}
@@ -110,7 +111,7 @@
 {{--                                                                          </div>--}}
 {{--                                                                              @endif--}}
 {{--                                                                          </span>--}}
-                                 </a>
+
                              </li>
                          </ul>
                      </div>
