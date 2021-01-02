@@ -4,24 +4,27 @@
     <section id="contact" class="contact-area">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col-lg-8">
                     <div class="section-title text-center pb-10">
                         <h4 class="title">Creating a new account</h4>
+                        <br>
+                        <br>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="contact-form">
 
                         <form  action="/applicants" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <input type="text" name="applicant_name" placeholder="Your Name"  class="form-control" value="{{old('applicant_name')}}">
+                                        <label> Your name:</label>
+                                        <input type="text" name="pending_name"   class="form-control" value="{{old('pending_name')}}">
                                         <div class="help-block with-errors">
-                                            @error("applicant_name")
+                                            @error("pending_name")
                                             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                             @enderror
                                         </div>
@@ -29,9 +32,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-                                        <input type="email" name="applicant_email" placeholder="Your Email" value="{{old('applicant_email')}}" >
+                                        <label> Your email: </label>
+                                        <input type="email" name="pending_email"  value="{{old('pending_email')}}" >
                                         <div class="help-block with-errors">
-                                            @error("applicant_email")
+                                            @error("pending_email")
                                             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                             @enderror
                                         </div>
@@ -39,9 +43,10 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-                                        <input type="tel" name="applicant_mobile" placeholder="Mobile" value="{{old('applicant_mobile')}}">
+                                        <label> Your mobile phone:</label>
+                                        <input type="tel" name="pending_mobile"  value="{{old('pending_mobile')}}">
                                         <div class="help-block with-errors">
-                                            @error("applicant_mobile")
+                                            @error("pending_mobile")
                                             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                             @enderror
                                         </div>
@@ -56,8 +61,9 @@
 
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-                                        <select class="custom-select form-group" id="inputGroupSelect01"  name="applicant_city" value="{{old('applicant_city')}}">
-                                            <option selected>City</option>
+                                        <label> Select your current city :</label>
+                                        <select class="custom-select form-group" id="inputGroupSelect01"  name="pending_city" value="{{old('pending_city')}}">
+{{--                                            <option selected>City</option>--}}
                                             <option value="Irbid">Irbid</option>
                                             <option value="Ajloun">Ajloun</option>
                                             <option value="Jerash">Jerash</option>
@@ -71,35 +77,37 @@
                                             <option value="Maan">Maan</option>
                                             <option value="Aqaba">Aqaba</option>
                                         </select>
-                                        @error("applicant_city")
+                                        @error("pending_city")
                                         <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                         @enderror
                                     </div> <!-- single form -->
                                 </div>
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-                                            <select class="custom-select form-group" name="x" id="">
-                                                <option selected>Select your Service: </option>
+                                        <label> Select your Service:</label>
+                                            <select class="custom-select form-group" name="category_id" id="" value="{{old('category_id')}}>
+{{--                                                <option selected> Select your Service: </option>--}}
                                                 @foreach($categories as $category)
                                                     <option value="{{$category->id}}">{{$category->cat_name}} </option>
                                                 @endforeach
                                             </select>
-                                            @error("x")
+                                            @error("category_id")
                                             <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                             @enderror
 
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <select class="custom-select form-group" name="applicant_subscription_type" id="">
-                                            <option selected>Select the Subscription type:</option>
+                                        <label>Select the Subscription type:</label>
+                                        <select class="custom-select form-group" name="pending_subscription_type" id="" value="{{old('pending_subscription_type')}}">
+{{--                                            <option selected>Select the Subscription type:</option>--}}
                                             <option value="trail">3 Month trial </option>
                                             <option value="Monthly">Monthly</option>
                                             <option value="Half yearly">Half yearly</option>
                                             <option value="Yearly">Yearly</option>
                                         </select>
-                                        @error("applicant_subscription_type")
+                                        @error("pending_subscription_type")
                                         <p style="color:red;font-size: 1rem ;">{{$message}}</p>
                                         @enderror
 
@@ -108,48 +116,50 @@
 
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-
+                                      <label>upload your image <small style="color: red">(optional)</small> :</label>
                                         <div class="input-group mb-3">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input"  name="applicant_image" id="inputGroupFile02" value="{{old('applicant_image')}}">
+                                                <input type="file" class="custom-file-input"  name="pending_image" id="inputGroupFile02" value="{{old('pending_image')}}">
                                                 <label class="custom-file-label" for="inputGroupFile02">Your image</label>
-                                                @error("applicant_image")
-                                                <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-                                                @enderror
+
                                             </div>
 
                                         </div>
-
+                                            @error("pending_image")
+                                              <p style="color:red;font-size: 1rem ;">{{$message}}</p>
+                                            @enderror
                                     </div> <!-- single form -->
                                 </div>
 
 
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-
+                                        <label>upload your educational degree certificate image :</label>
                                         <div class="input-group mb-3">
                                             <div class="custom-file">
-                                                <input type="file" class="custom-file-input"  name="applicant_education_img" id="inputGroupFile02" value="{{old('applicant_education_img')}}">
+                                                <input type="file" class="custom-file-input"  name="pending_education_img" id="inputGroupFile02" value="{{old('pending_education_img')}}">
                                                 <label class="custom-file-label" for="inputGroupFile02">Educational certificates</label>
-                                                @error("applicant_education_img")
-                                                <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-                                                @enderror
+
                                             </div>
 
                                         </div>
-
+                                                 @error("pending_education_img")
+                                                 <p style="color:red;font-size: 1rem ;">{{$message}}</p>
+                                                 @enderror
                                     </div> <!-- single form -->
                                 </div>
 
 
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <textarea placeholder="Description" name="applicant_desc"  >{{old('applicant_desc')}}</textarea>
+                                        <label>Describe your self <small>(between 20 to 200 character)</small></label>
+                                        <textarea placeholder="Description.." name="pending_desc"  >{{old('pending_desc')}}</textarea>
                                         <div class="help-block with-errors">
-                                            @error("applicant_desc")
-                                            <p style="color:red;font-size: 1rem ;">{{$message}}</p>
-                                            @enderror
+
                                         </div>
+                                            @error("pending_desc")
+                                            <p style="color:red;font-size: 1rem ;">{{$message}}</p>
+                                           @enderror
                                     </div> <!-- single form -->
                                 </div>
 

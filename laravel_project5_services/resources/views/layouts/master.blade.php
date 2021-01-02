@@ -43,11 +43,17 @@
                          </a>
                      </li>
                      <li>
-                        <a class="nav-link" href="{{URL::asset('choose_category_form')}}">
+                        <a class="nav-link" href="{{URL::asset('pending')}}">
                             <i class="nc-icon nc-notes"></i>
-                            <p>Choose Category</p>
+                            <p>Pending Requests</p>
                         </a>
                     </li>
+                     @auth
+                     <li>
+                         <p>{{auth()->user()->name}}</p>
+                    </li>
+                     @endauth
+
                      {{-- <li>
                          <a class="nav-link" href="{{URL::asset('House_Cleaning')}}">
                          <i class="nc-icon nc-paper-2"></i>
@@ -81,17 +87,29 @@
 
                          <ul class="navbar-nav ml-auto">
                              <li class="nav-item">
-                                 <a class="nav-link" href="#pablo">
-{{--                                     <span class="no-icon">Log out</span>--}}
 
-                                     {{--                                     <span class="no-icon">--}}
+                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                     <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                         {{ __('Logout') }}
+                                     </a>
 
-                                     {{--                                         @if (session('status'))--}}
-                                     {{--                                             <div class="alert alert-success" role="alert">--}}
-                                     {{--                                         {{ session('status') }}--}}
-                                     {{--                                     </div>--}}
-                                     {{--                                         @endif--}}
-                                     {{--                                     </span>--}}
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                         @csrf
+                                     </form>
+                                 </div>
+                                 @auth()
+                                     <span class="no-icon">Log out</span>
+                                 @endauth
+{{--                                                                          <span class="no-icon">--}}
+
+{{--                                                                              @if (session('status'))--}}
+{{--                                                                                  <div class="alert alert-success" role="alert">--}}
+{{--                                                                              {{ session('status') }}--}}
+{{--                                                                          </div>--}}
+{{--                                                                              @endif--}}
+{{--                                                                          </span>--}}
                                  </a>
                              </li>
                          </ul>
@@ -146,4 +164,30 @@
  <script src="{{URL::asset('./dashboard/js/demo.js')}}"></script>
 
 
- </html>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script>
+     @if(session('status_store'))
+     swal({
+         title: "{{session('status_store')}}",
+         icon: "success",
+         {{--icon: "{{session('statuscode')}}",--}}
+         button: "ok",
+     });
+     @endif
+     @if(session('status_update'))
+     swal({
+         title: "{{session('status_update')}}",
+         icon: "success",
+         button: "ok",
+     });
+     @endif
+     @if(session('status_destroy'))
+     swal({
+         title: "{{session('status_destroy')}}",
+         icon: "error",
+         button: "ok",
+     });
+     @endif
+ </script>
+
+</html>

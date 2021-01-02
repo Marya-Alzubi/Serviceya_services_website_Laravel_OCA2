@@ -8,14 +8,14 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10">
                     <div class="header-content text-center">
-                        <h3 class="header-title">
-                            <br>
-                            Let's get to work!
-                        </h3>
+                        <h6 class="header-title">
+                            {{-- <br> --}}
+                            If you want something said, ask a man; if you want something done, ask a woman
+                        </h6>
 
                         <ul class="header-btn">
-                            <li><a class="main-btn btn-one" href="#">Login</a></li>
-                            <li><a class="main-btn btn-one" href="#">Sign Up</a></li>
+                            <li><a class="main-btn btn-one" href="applicants/create">Become a Service Provider</a></li>
+                            {{-- <li><a class="main-btn btn-one" href="#"></a></li> --}}
                         </ul>
                     </div> <!-- header content -->
                 </div>

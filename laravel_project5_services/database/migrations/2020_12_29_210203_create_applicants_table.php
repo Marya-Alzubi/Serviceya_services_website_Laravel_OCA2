@@ -17,7 +17,6 @@ class CreateApplicantsTable extends Migration
             function (Blueprint $table) {
             $table->bigIncrements('applicant_id');
             $table->string('category_id')->nullable();         // check button or dropdown list from 3 category
-            $table->boolean('applicant_approve')->nullable();         // check button or dropdown list from 3 category
             $table->string('applicant_name')->nullable();
             $table->string('applicant_email')->nullable()->unique();
             $table->bigInteger('applicant_mobile')->nullable();

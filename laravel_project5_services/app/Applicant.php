@@ -16,6 +16,11 @@ protected $primaryKey ="applicant_id";
     }
 
 
+    public function pendingrequest()
+    {
+        return $this->belongsTo(Pending_request::class);
+    }
+
     protected $guarded = [];
 //    protected $fillable = [
 //        "applicant_name",

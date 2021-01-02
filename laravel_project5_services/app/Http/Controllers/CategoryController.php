@@ -30,7 +30,7 @@ class CategoryController extends Controller
     {
 //        $categories = Category::all();
         $categories = Category::orderByDesc('id')->get();
-        return view("dashboard.categories.create_category", compact("categories"));
+        return view("dashboard.categories.crud.create_category", compact("categories"));
     }
 
     /**
@@ -40,7 +40,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view("dashboard/categories/create_category");
+        return view("dashboard/categories/crud/create_category");
     }
 
     /**
@@ -62,7 +62,7 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-        return redirect("/categories");
+        return redirect("/categories")->with('status_store', 'new category has been created successfully');
 
         // this method will not be effective in uploading image
 //        Category::create($request->all());
@@ -89,7 +89,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('dashboard/categories/edit_category' , compact('category'));
+        return view('dashboard/categories/crud/edit_category' , compact('category'));
     }
 
     /**
@@ -115,7 +115,7 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-        return redirect("/categories");
+        return redirect("/categories")->with('status_update', 'new category has been edited successfully');
 
 // this method will not be effective in uploading image
 //        $category = Category::findOrFail($id);
@@ -132,7 +132,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::findOrFail($id)->delete();
-        return redirect("/categories");
+        return redirect("/categories")->with('status_destroy', 'new category has been deleted successfully');
     }
 
     public function showCat(Category $category)
@@ -150,14 +150,14 @@ class CategoryController extends Controller
         $specific_applicants= $applicants->applicants;
         // return $specific_applicants;
 
-        return view('web.singlecategory',compact('specific_applicants'));
+        return view('web.single_category',compact('specific_applicants'));
 
     }
     public function choose_category_form()
     {
         $categories = Category::all();
         // dd($categories);
-        return view('dashboard.categories.choose_category_form',compact('categories'));
+        return view('dashboard.categories.dynamic_tables.choose_category_form',compact('categories'));
 
     }
     public function single_category_table(Request $request)
@@ -165,7 +165,7 @@ class CategoryController extends Controller
         $select_category = $request->select_category;
         $applicants =Category::find($select_category);
         $category_all_applicants=$applicants->applicants;
-        return view('dashboard.categories.single_category_table',compact('category_all_applicants'));
+        return view('dashboard.categories.dynamic_tables.single_category_table',compact('category_all_applicants'));
     }
 
 
@@ -178,6 +178,6 @@ class CategoryController extends Controller
 //     return view('','');
 //     }
 
-     
+
 
 }

@@ -1,9 +1,6 @@
 @extends('layouts.master')
-
 @section('main')
-
     <div class="col-md-12">
-
         <div class="card" >
             <div class="card-header">
                 <h4 class="card-title">Add Category</h4>
@@ -11,7 +8,11 @@
             <div class="card-body">
                 <form  method="post" action="/categories" enctype="multipart/form-data">
                     @csrf
-
+{{--@if(session('status'))--}}
+{{--    <div class="alert alert-success" role="alert" >--}}
+{{--    {{session('status')}}--}}
+{{--    </div>--}}
+{{--@endif--}}
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -45,17 +46,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                     <button type="submit_category" name="submit" class="btn btn-info btn-fill btn btn-primary">Add category</button>
                     <div class="clearfix"></div>
                 </form>
             </div>
         </div>
-
-
         <div >
             <div class="card strpied-tabled-with-hover">
                 <div class="card-header ">
@@ -79,7 +74,6 @@
                         @php($count=0)
                         @foreach($categories as $category )
                             @php($count++)
-
                             <tr>
                                 <td>{{$count}}</td>
                                 <td>{{$category->id}}</td>
@@ -92,7 +86,6 @@
                                     </a>
                                 </td>
                                 <td>
-
                                 <form method="post" action="/categories/{{$category->id}}">
                                     @csrf
                                     @method("DELETE")
@@ -100,7 +93,6 @@
                                     <button class="btn btn-danger" value="DELETE" > Delete</button>
                                 </form>
                                 </td>
-
                             </tr>
                         @endforeach
                         </tbody>

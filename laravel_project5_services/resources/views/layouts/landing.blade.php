@@ -43,9 +43,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
+
                             <a class="navbar-brand" href="#">
                                 <img src="{{URL::asset('main/images/logo.svg')}}" alt="Logo">
-                            </a>
+                           </a> <h4>Serviceya</h4>
+
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -75,7 +77,7 @@
                         </nav>
                          <!-- navbar -->
                     </div>
-                </div> 
+                </div>
                 <!-- row -->
             </div>
              <!-- container -->
@@ -85,9 +87,9 @@
 
 
          @yield('header_content')
-         
-        
-         
+
+
+
     </header>
 
     <!--====== HEADER PART ENDS ======-->
@@ -118,7 +120,7 @@
                                     <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
                                 </ul>
                             </div> <!-- footer logo -->
-                            
+
                         </div> <!-- footer logo support -->
                     </div>
                 </div> <!-- row -->
@@ -165,15 +167,15 @@
                           <div class="container">
                               <div class="row row-cols-2">
                                 <div class="col"><img src="{{URL::asset('main/images/visa.png')}}" class="rounded" alt="..."></div>
-                       
+
                               </div>
                           </div>
-                        </div> 
+                        </div>
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- footer widget -->
-        
+
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
