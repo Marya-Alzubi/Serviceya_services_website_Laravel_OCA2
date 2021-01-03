@@ -23,7 +23,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <label> Your name:</label>
+                                        <label> Your name:<small>(4 parts)</small></label>
                                         <input type="text" name="pending_name"   class="form-control" value="{{old('pending_name')}}">
                                         <div class="help-block with-errors">
                                             @error("pending_name")
@@ -104,10 +104,10 @@
                                         <label>Select the Subscription type:</label>
                                         <select class="custom-select form-group" name="pending_subscription_type" id="" value="{{old('pending_subscription_type')}}">
 {{--                                            <option selected>Select the Subscription type:</option>--}}
-                                            <option value="trail">3 Month trial </option>
-                                            <option value="Monthly">Monthly</option>
-                                            <option value="Half yearly">Half yearly</option>
-                                            <option value="Yearly">Yearly</option>
+{{--                                            <option value="trail">3 Month trial </option>--}}
+                                            <option value="Monthly">3 months</option>
+                                            <option value="Half yearly">6 months</option>
+                                            <option value="Yearly">1 Year</option>
                                         </select>
                                         @error("pending_subscription_type")
                                         <p style="color:red;font-size: 1rem ;">{{$message}}</p>
@@ -154,7 +154,7 @@
 
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <label>Describe your self <small>(between 20 to 200 character)</small></label>
+                                        <label>Describe your self <small style="color: red">(between 20 to 200 character)</small></label>
                                         <textarea placeholder="Description.." name="pending_desc"  >{{old('pending_desc')}}</textarea>
                                         <div class="help-block with-errors">
 

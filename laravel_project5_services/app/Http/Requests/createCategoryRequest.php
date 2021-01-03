@@ -24,7 +24,7 @@ class createCategoryRequest extends FormRequest
     public function rules()
 {
     return [
-        'cat_name'    =>"required | unique:categories| max:20",
+        'cat_name'    =>"required | unique:categories|min:3| max:20",
         'cat_desc'    =>"required | min:20 | max:200 ",
         'cat_image'   =>'required | mimes:jpeg,jpg,png max:10000', // becouse of default image in controller the required validation will not be need
     ];

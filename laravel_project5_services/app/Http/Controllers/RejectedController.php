@@ -14,6 +14,10 @@ class RejectedController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function Add_to_rejected($id)
     {
@@ -30,9 +34,36 @@ class RejectedController extends Controller
             "rejected_image"                   =>$single_pending->pending_image,
             "rejected_education_img"          =>$single_pending->pending_education_img,
         ]);
-        
+        $single_pending->delete();
 
-         return redirect ('choose_category_form');
+        return back()->with('status_destroy', 'the applicant request has been deleted successfully');
+
+
+//         return redirect ('choose_category_form');
+
+
+    }
+    public function Add_to_rejected_fromSinglePage($id)
+    {
+        $single_pending = Pending_request::find($id);
+        // dd($single_pending);
+        Rejected::create([
+            "rejected_name"                    =>$single_pending->pending_name,
+            "rejected_email"                   =>$single_pending->pending_email,
+            "rejected_mobile"                  =>$single_pending->pending_mobile,
+            "rejected_city"                    =>$single_pending->pending_city,
+            "category_id"                       =>$single_pending->category_id,
+            "rejected_desc"                    =>$single_pending->pending_desc,
+            "rejected_subscription_type"       =>$single_pending->pending_subscription_type,
+            "rejected_image"                   =>$single_pending->pending_image,
+            "rejected_education_img"          =>$single_pending->pending_education_img,
+        ]);
+        $single_pending->delete();
+
+        return redirect('pending')->with('status_destroy', 'the applicant request has been deleted successfully');
+
+
+//         return redirect ('choose_category_form');
 
 
     }

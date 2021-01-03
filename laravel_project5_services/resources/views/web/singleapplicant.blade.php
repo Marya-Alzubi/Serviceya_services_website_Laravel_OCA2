@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div class="contact-form text-center">
-                <h2><img src="applicant_images/{{$single_applicant->applicant_image}}"></h2>
+                <h2><img src="applicant_images/{{$single_applicant->applicant_image}}" alt="applicant image"></h2>
                 <h2>{{$single_applicant->applicant_name}}</h2>
                 <h4>{{$single_applicant->applicant_email}}</h4>
                 <h4>{{$single_applicant->applicant_mobile}}</h4>

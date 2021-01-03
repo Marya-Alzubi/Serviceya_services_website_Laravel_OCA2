@@ -8,10 +8,18 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10">
                     <div class="header-content text-center">
+
                         <h6 class="header-title">
                             {{-- <br> --}}
-                            If you want something said, ask a man; if you want something done, ask a woman
+{{--                            Serviceya--}}
+
+
                         </h6>
+                        <p class="header-title">
+                            {{-- <br> --}}
+{{--                            Let's get to work!--}}
+                            Can't do it in real life? Do it with Serviceya
+                        </p>
 
                         <ul class="header-btn">
                             <li><a class="main-btn btn-one" href="applicants/create">Become a Service Provider</a></li>
@@ -36,12 +44,18 @@
 
     <section id="service" class="services-area">
         <div class="container">
+{{--            <h1 class="text-center"> If you want something said, ask a man <br> if you want something done, ask a woman!</h1>--}}
+{{--            <br>--}}
+{{--            <hr>--}}
+{{--            <br>--}}
+{{--            <br>--}}
+          <h2 class="text-center">Our Services </h2>
             <div class="row justify-content-center">
                 @foreach($categories as $key => $categories)
                     <div class="col-lg-4 col-md-7 col-sm-9">
                         <div class="single-pricing mt-40">
                             <div class="text-center">
-                                <img src='{{asset("category_images/$categories->cat_image")}}' class="rounded" alt="...">
+                                <img src='{{asset("category_images/$categories->cat_image")}}' class="rounded" alt="category">
                             </div>
                             <div class="pricing-header text-center">
                                 <h4> {{ $categories->cat_name}}</h4>
@@ -108,15 +122,13 @@
                     <div class="single-pricing mt-40">
                         <div class="pricing-header text-center">
                             <h5 class="sub-title">Basic</h5>
-                            <span class="price"> free</span>
+                            <span class="price"> JD 30</span>
                             <p class="year">3 months</p>
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li><i class="lni-check-mark-circle"></i> Carefully crafted components</li>
-                                <li><i class="lni-check-mark-circle"></i> Amazing page examples</li>
-                                <li><i class="lni-check-mark-circle"></i> Super friendly support team</li>
-                                <li><i class="lni-check-mark-circle"></i> Awesome Support</li>
+                                <li><i class="lni-check-mark-circle"></i> 1000 points </li>
+                                <li><i class="lni-check-mark-circle"></i>1 Free service value of 10 JD</li>
                             </ul>
                         </div>
                         <div class="pricing-btn text-center">
@@ -136,10 +148,8 @@
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li><i class="lni-check-mark-circle"></i> Carefully crafted components</li>
-                                <li><i class="lni-check-mark-circle"></i> Amazing page examples</li>
-                                <li><i class="lni-check-mark-circle"></i> Super friendly support team</li>
-                                <li><i class="lni-check-mark-circle"></i> Awesome Support</li>
+                                <li><i class="lni-check-mark-circle"></i> 5000 points </li>
+                                <li><i class="lni-check-mark-circle"></i>2 Free service value of 20 JD</li>
                             </ul>
                         </div>
                         <div class="pricing-btn text-center">
@@ -159,10 +169,8 @@
                         </div>
                         <div class="pricing-list">
                             <ul>
-                                <li><i class="lni-check-mark-circle"></i> Carefully crafted components</li>
-                                <li><i class="lni-check-mark-circle"></i> Amazing page examples</li>
-                                <li><i class="lni-check-mark-circle"></i> Super friendly support team</li>
-                                <li><i class="lni-check-mark-circle"></i> Awesome Support</li>
+                                <li><i class="lni-check-mark-circle"></i> 10000 points </li>
+                                <li><i class="lni-check-mark-circle"></i>2 Free service value of 50 JD</li>
                             </ul>
                         </div>
                         <div class="pricing-btn text-center">
@@ -190,7 +198,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title text-center pb-10">
-                        <h4 class="title">We await contact</h4>
+                        <h4 class="title">Contact Us</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->

@@ -9,16 +9,14 @@
      <meta charset="utf-8" />
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
      <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-     <meta charset="UTF-8">
      <meta http-equiv="X-UA-compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta property="og:title" content="E-commerce ">
+     <meta property="og:title" content="Blog ">
      <meta property="og:locale" content="en_US">
-     <meta name="description" content="Toy">
-     <meta property="og:description" content="At  TOYZEE  it is our belief that children are the future. In order to create the best possible future for them, we must give them the best possible start. TOYZEE  products not only encourage and stimulate young minds, we also protect their growing bodies with ergonomically sound designs.
-">
-     <meta name="keywords" content="e-commerce, toys, interactive games,autism, Kids ,  Php, CSS , JavaScript, Bootstrap, Web Developer,">
-     <meta name="author" content="Mohammad Yacoub & Marya Alzoubi & Roaa AbuShaqra & Firas Diab & Lana Mustafa ">
+     <meta name="description" content="Services">
+     <meta property="og:description" content=" Focus on reaching global needs and easily adapt our technology in new markets to help more families and save lives">
+     <meta name="keywords" content="Blog,Services, Cleaning ,Elderly people care ,Women empowerment,Servecya ,Service provider, employment ,Laravel, Php, CSS , JavaScript, Bootstrap, Web Developer,">
+     <meta name="author" content="Hana Shaq & Osama Aldamat & marya Alzu'bi & Omar  Alnawaiseh & marina alsahawneh ">
      <!--     Fonts and icons     -->
      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -35,50 +33,40 @@
 
              <div class="sidebar-wrapper">
                  <div class="logo">
-                     <a href="   " class="simple-text">
-                         logo
-                     </a>
+                     <a class="navbar-brand" href="/landing_page">
+                     </a> <h4>Serviceya Dashboard</h4>
                  </div>
                  <ul class="nav">
                      <li class="nav-item ">
-                         <a class="nav-link" href="{{URL::asset('/admin')}}">
+                         <a class="nav-link" href="{{URL::asset('/dashboard/index')}}">
                          <i class="nc-icon nc-circle-09"></i>
-                             <p>Admin</p>
+                             <p>Dashbord</p>
                          </a>
                      </li>
+{{--                     <li class="nav-item ">--}}
+{{--                         <a class="nav-link" href="{{URL::asset('/admin')}}">--}}
+{{--                         <i class="nc-icon nc-circle-09"></i>--}}
+{{--                             <p>Admin</p>--}}
+{{--                         </a>--}}
+{{--                     </li>--}}
                      <li>
                          <a class="nav-link" href="{{URL::asset('categories')}}">
                              <i class="nc-icon nc-notes"></i>
-                             <p>Category</p>
+                             <p>Categories</p>
                          </a>
                      </li>
                      <li>
                         <a class="nav-link" href="{{URL::asset('pending')}}">
-                            <i class="nc-icon nc-notes"></i>
+                            <i class="nc-icon nc-attach-87"></i>
                             <p>Pending Requests</p>
                         </a>
                     </li>
-
-                     {{-- <li>
-                         <a class="nav-link" href="{{URL::asset('House_Cleaning')}}">
-                         <i class="nc-icon nc-paper-2"></i>
-                             <p>User House Cleaning </p>
-                         </a>
-                     </li>
                      <li>
-                         <a class="nav-link" href="{{URL::asset('Health_Care')}}">
-                             <i class="nc-icon nc-paper-2"></i>
-                             <p>User Health Care</p>
-                         </a>
-                     </li>
-                     <li>
-                         <a class="nav-link" href="{{URL::asset('Childcare')}}">
-                         <i class="nc-icon nc-paper-2"></i>
-                             <p>User Childcare</p>
-                         </a>
-                     </li> --}}
-
-
+                        <a class="nav-link" href="{{URL::asset('choose_category_form')}}">
+                            <i class="nc-icon nc-check-2"></i>
+                            <p>Accepted applicants</p>
+                        </a>
+                    </li>
                  </ul>
              </div>
          </div>
@@ -110,40 +98,6 @@
                              </a>
                              </li>
                          </ul>
-{{--                         <ul class="navbar-nav ml-auto">--}}
-{{--                             <li class="nav-item">--}}
-{{--                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
-{{--                                     <a class="dropdown-item" href="{{ route('logout') }}"--}}
-{{--                                        onclick="event.preventDefault();--}}
-{{--                                                     document.getElementById('logout-form').submit();">--}}
-{{--                                         {{ __('Logout') }}--}}
-{{--                                     </a>--}}
-
-{{--                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
-{{--                                         @csrf--}}
-{{--                                     </form>--}}
-{{--                                 </div>--}}
-{{--                                 <a class="nav-link" href="#">--}}
-{{--                                 @auth--}}
-{{--                                     <span class="no-icon"> Hello {{auth()->user()->name}} </span>--}}
-{{--                                 @endauth--}}
-{{--                                 </a>--}}
-{{--                                     <a class="nav-link" href="#">--}}
-{{--                                 @auth()--}}
-{{--                                     <span class="no-icon">Log out</span>--}}
-{{--                                 @endauth--}}
-{{--                                     </a>--}}
-{{--                                                                          <span class="no-icon">--}}
-
-{{--                                                                              @if (session('status'))--}}
-{{--                                                                                  <div class="alert alert-success" role="alert">--}}
-{{--                                                                              {{ session('status') }}--}}
-{{--                                                                          </div>--}}
-{{--                                                                              @endif--}}
-{{--                                                                          </span>--}}
-
-{{--                             </li>--}}
-{{--                         </ul>--}}
                      </div>
                  </div>
              </nav>
@@ -151,7 +105,7 @@
              <div class="content">
 
                  <div class="container-fluid">
-                     <div class="row">
+{{--                     <div class="row">--}}
 
 
 

@@ -3,7 +3,7 @@
     <div class="col-md-12">
         <div class="card" >
             <div class="card-header">
-                <h4 class="card-title">Add Category</h4>
+                <h4 class="card-title">Add New Category</h4>
             </div>
             <div class="card-body">
                 <form  method="post" action="/categories" enctype="multipart/form-data">
@@ -54,14 +54,14 @@
         <div >
             <div class="card strpied-tabled-with-hover">
                 <div class="card-header ">
-                    <h4 class="card-title">Category</h4>
+                    <h4 class="card-title">Categories table</h4>
                 </div>
                 <div class="card-body table-full-width table-responsive">
                     <table class="table table-hover table-striped">
                         <thead>
                         <tr>
                             <th scope="col">Number</th>
-                            <th scope="col">Id</th>
+{{--                            <th scope="col">Id</th>--}}
                             <th scope="col">Name</th>
                             <th scope="col">Desc</th>
                             <th scope="col">Image</th>
@@ -76,10 +76,10 @@
                             @php($count++)
                             <tr>
                                 <td>{{$count}}</td>
-                                <td>{{$category->id}}</td>
+{{--                                <td>{{$category->id}}</td>--}}
                                 <td>{{$category->cat_name}}</td>
                                 <td>{{$category->cat_desc}}</td>
-                                <td><img width="100" height="100" src="{{asset("category_images/$category->cat_image")}}"></td>
+                                <td><img width="100" height="100" alt="'category image" src="{{asset("category_images/$category->cat_image")}}"></td>
                                 <td >
                                     <a href="categories/{{$category->id}}/edit">
                                         <button class="btn btn-primary" value="EDIT" > Edit </button>
@@ -88,7 +88,7 @@
                                 <td>
                                 <form method="post" action="/categories/{{$category->id}}">
                                     @csrf
-                                    @method("DELETE")
+                                    <input type="hidden" name="_method" value="DELETE">
                                     <br>
                                     <button class="btn btn-danger" value="DELETE" > Delete</button>
                                 </form>

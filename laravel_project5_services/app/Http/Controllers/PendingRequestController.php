@@ -18,7 +18,10 @@ class PendingRequestController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
+    public function __construct()
+    {
+        $this->middleware('auth')->except('create', 'store');
+    }
     /////////////////test after create and store
     //this method to view all pendingrequests in one table in the admin dashboard
     //before rejecting and accepting the applicant by admin, table contains accept & reject
@@ -79,6 +82,7 @@ class PendingRequestController extends Controller
         ]);
 
                 //return "Welcome, You are in ";
+//                 return redirect('/landing_page')->with('status_store', 'your request has been created successfully');;
                  return back()->with('status_store', 'your request has been created successfully');;
     }
 
@@ -90,7 +94,7 @@ class PendingRequestController extends Controller
      */
     public function show(Pending_request $pending_request)
     {
-        $pendings = Pending_request::all();
+        $pendings = Pending_request::orderByDesc('id')->get();
         return view('dashboard.filtration_applicants.pending.pending_table',compact('pendings'));
     }
 
@@ -106,32 +110,43 @@ class PendingRequestController extends Controller
     //accepted the pending request, enter the value intp applicant table
     //Add the applicant to the table in dashboard "/applicants"
 
-    public function Add_to_applicant($id)
-    {
-        $single_pending = Pending_request::find($id);
-        // dd($single_pending);
-        Pending_request::create([
-            "applicant_name"                    =>$single_pending->pending_name,
-            "applicant_email"                   =>$single_pending->pending_email,
-            "applicant_mobile"                  =>$single_pending->pending_mobile,
-            "applicant_city"                    =>$single_pending->pending_city,
-            "category_id"                       =>$single_pending->category_id,
-            "applicant_desc"                    =>$single_pending->pending_desc,
-            "applicant_subscription_type"       =>$single_pending->pending_subscription_type,
-            "applicant_image"                   =>$single_pending->pending_image,
-            "applicantg_education_img"          =>$single_pending->pending_education_img,
-        ]);
-
-         return redirect ('choose_category_form');
-
-
-    }
+//    public function Add_to_applicant($id)
+//    {
+//        $single_pending = Pending_request::find($id);
+//        // dd($single_pending);
+//        Pending_request::create([
+//            "applicant_name"                    =>$single_pending->pending_name,
+//            "applicant_email"                   =>$single_pending->pending_email,
+//            "applicant_mobile"                  =>$single_pending->pending_mobile,
+//            "applicant_city"                    =>$single_pending->pending_city,
+//            "category_id"                       =>$single_pending->category_id,
+//            "applicant_desc"                    =>$single_pending->pending_desc,
+//            "applicant_subscription_type"       =>$single_pending->pending_subscription_type,
+//            "applicant_image"                   =>$single_pending->pending_image,
+//            "applicant_education_img"          =>$single_pending->pending_education_img,
+//        ]);
+////        $single_pending->delete();
+////        return $this->destroy($id);
+//
+////         return redirect ('delete_accepted_record_db');
+//        return $this->dedy($id);
+//
+//
+//    }
+//    public function dedy($id)
+//    {
+//        Pending_request::findOrFail($id)->delete();
+//        return back();
+//        return redirect("/pending");
+//
+//    }
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Pending_request  $pending_request
      * @return \Illuminate\Http\Response
      */
+
 
      //split routes to take one method
     public function destroy(Pending_request $pending_request,$id)
@@ -141,4 +156,12 @@ class PendingRequestController extends Controller
         // return redirect("/rejected");
 
     }
+    public function delete_accepted_record_db()
+    {
+        Pending_request::findOrFail($id)->delete();
+        return back();
+        // return redirect("/rejected");
+
+    }
+
 }

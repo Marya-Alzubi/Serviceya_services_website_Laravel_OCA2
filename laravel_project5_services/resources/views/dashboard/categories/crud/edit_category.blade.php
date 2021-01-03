@@ -15,11 +15,11 @@
             <div class="card-body">
                 <form method="post" action="/categories/{{$category->id}}">
                     @csrf
-                    @method('PATCH')
+                    <input type="hidden" name="_method" value="PUT">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <img width="200" height="200" src="{{asset("category_images/$category->cat_image")}}">
+                                <img width="200" height="200" alt="category image" src="{{asset("category_images/$category->cat_image")}}">
                             </div>
                         </div>
                     </div>

@@ -24,6 +24,16 @@ Route::get('singleapplicant/{id}','ApplicantController@show_applicant')->name('s
 
 ////////////////// Dashboard Categories and Applicants
 Route::resource("/categories", "CategoryController");                          // crud category
+//Route::get("/categories", "CategoryController@index");
+//Route::post("/categories", "CategoryController@store");
+//Route::get("/categories/create", "CategoryController@create");
+////Route::get("/categories/{id}", "CategoryController@show");
+//Route::get("/categories/{id}/edit", "CategoryController@edit");
+//Route::PUT("/categories/{id}", "CategoryController@update");
+//Route::DELETE("/categories/{id}", "CategoryController@delete");
+
+
+
 Route::get('/applicants', 'ApplicantController@index');                        // applicants table
 
 
@@ -48,14 +58,14 @@ route::get('/',function (){
 
 /* start
 //******* 1/1/2020*********/
-Route::get('/choose_category_for
-m', 'CategoryController@choose_category_form');    // choose category form
-Route::post('/single_category_table', 'categoryController@single_category_table');    // choose category form
+Route::get('/choose_category_form', 'CategoryController@choose_category_form');    // choose category form
+Route::post('/dynamic_category_table', 'CategoryController@dynamic_category_table');    // choose category form
+//Route::get('/dynamic_category_table', 'CategoryController@dynamic_category_table_test');     // choose category form
 
 
 //Friday Work
 //this route goes to single applicant page dashboard
-Route::get('pending_request/{id}','ApplicantController@pending_request'); // id for category
+Route::get('dynamic_accepted_applicant/{id}','ApplicantController@dynamic_accepted_applicant'); // id for category
 
 
 //Pending Requests Routes, from register form, post request
@@ -66,19 +76,33 @@ Route::post('/applicants','PendingRequestController@store');
 //this will be shown when admin click on Pending Request Page in the left side
 Route::get('pending','PendingRequestController@show');
 Route::get('singlepending/{id}','PendingRequestController@singlepending'); // id for pending_request ([service provider])
+Route::get('delete_accepted_record_db','PendingRequestController@delete_accepted_record_db');
 
 
 
 //
 Route::get('/add_to_applicant/{id}','ApplicantController@Add_to_applicant'); // sho hyda ya aida
+Route::get('/Add_to_applicant_fromSinglePage/{id}','ApplicantController@Add_to_applicant_fromSinglePage'); // sho hyda ya aida
 Route::get('/add_to_rejected/{id}','RejectedController@Add_to_rejected');    // sho hyda ya aida
+Route::get('/Add_to_rejected_fromSinglePage/{id}','RejectedController@Add_to_rejected_fromSinglePage');    // sho hyda ya aida
 // Route::get('/add_to_rejected/{id}','PendingRequestController@destroy');
 
+route::get('/dashboard/index',function (){
+    return view('dashboard.index_dashboard');
+});
 
 
 
 
 
+
+
+
+
+/// hana edit and delete for dynamic_accepted_applicant page
+//Route::get('accepted_applicants/{id}/edit','ApplicantController@edit');
+//Route::get('/','ApplicantController@update');
+//Route::get('/','ApplicantController@delete');
 
 
 //testing from adam to understand concepts

@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests\createCategoryRequest;
+use App\Http\Requests\updateCategoryRequest;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
+    public function __construct()
+    {
+        $this->middleware('auth')->except('singlecategory', 'showCat');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -63,8 +64,8 @@ class CategoryController extends Controller
             "cat_desc"        =>$request->cat_desc,
             "cat_image"       =>$filename,
         ]);
-//        return redirect("/categories")->with('status_store', 'new category has been created successfully');
-        return redirect("/landing_page");
+        return redirect("/categories")->with('status_store', 'new category has been created successfully');
+
         // this method will not be effective in uploading image
 //        Category::create($request->all());
 //        return redirect("/categories" );
@@ -100,21 +101,21 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(createCategoryRequest $request, $id)
+    public function update(updateCategoryRequest $request, $id)
     {
         if ($request->hasFile('cat_image')) {
             $file = $request->file('cat_image') ;
             $ext = $file->getClientOriginalExtension() ;
-            $filename = time() . '.' . $ext ;
-            $file->move('category_images', $filename);
+            $filename3 = time() . '.' . $ext ;
+            $file->move('category_images', $filename3);
         }
         else {
-            $filename = Category::find($id)->cat_image;
+            $filename3 = Category::find($id)->cat_image;
         }
         Category::findOrFail($id)->update( [
             "cat_name"        =>$request->cat_name,
             "cat_desc"        =>$request->cat_desc,
-            "cat_image"       =>$filename,
+            "cat_image"       =>$filename3,
         ]);
         return redirect("/categories")->with('status_update', 'new category has been edited successfully');
 
@@ -159,16 +160,24 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         // dd($categories);
-        return view('dashboard.categories.dynamic_tables.choose_category_form',compact('categories'));
+        return view('dashboard.filtration_applicants.accepted.choose_category_form',compact('categories'));
 
     }
-    public function single_category_table(Request $request)
+    public function dynamic_category_table(Request $request)
     {
         $select_category = $request->select_category;
         $applicants =Category::find($select_category);
+//        $category_name = Category::where()
         $category_all_applicants=$applicants->applicants;
-        return view('dashboard.categories.dynamic_tables.single_category_table',compact('category_all_applicants'));
+        return view('dashboard.filtration_applicants.accepted.dynamic_category_table',compact('category_all_applicants','applicants'));
     }
+//    public function dynamic_category_table_test()
+//    {
+//
+//        $applicants =Category::all();
+//        $category_all_applicants=$applicants->applicants;
+//        return view('dashboard.filtration_applicants.accepted.dynamic_category_table',compact('category_all_applicants'));
+//    }
 
 
 ///testing, list all applicants that has category id equals 1
