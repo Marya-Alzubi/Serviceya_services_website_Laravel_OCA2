@@ -59,8 +59,9 @@ class ApplicantController extends Controller
     {
         //return "GOT YAA";
         $single_applicant = Applicant::find($id);
+        $category =     Category::find($id);
         //dd($single_applicant);
-        return view('web.single_applicant_page',compact('single_applicant'));
+        return view('web.single_applicant_page',compact('single_applicant', 'category'));
     }
 
       //////Applicant Related to the admin dashboard

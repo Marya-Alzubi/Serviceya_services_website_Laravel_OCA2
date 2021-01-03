@@ -33,7 +33,7 @@
                                                 <td>{{$applicant->applicant_name}}</td>
                                                 <td>{{$applicant->applicant_mobile}}</td>
                                                 <td>{{$applicant->applicant_email}}</td>
-                                                <td><img width="100" height="100" src='{{asset("applicant_images/$applicant->applicant_image")}}' alt="applicant image"></td>
+                                                <td><img width="100" height="100" src='{{asset("pending_images/$applicant->applicant_image")}}' alt="applicant image"></td>
                                                 <td >
                                                     <a href="/dynamic_accepted_applicant/{{$applicant->applicant_id}}">
                                                         <button class="btn btn-primary"  > show </button>

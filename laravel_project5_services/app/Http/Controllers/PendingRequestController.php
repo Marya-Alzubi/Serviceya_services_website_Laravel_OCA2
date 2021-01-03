@@ -65,9 +65,10 @@ class PendingRequestController extends Controller
             $ext = $file->getClientOriginalExtension() ;
             $pending_image = time() . '.' . $ext ;
             $file->move('pending_images', $pending_image);
-        } else {
-            $pending_image = "defaultImage.png";
         }
+//        else {
+//            $pending_image = "defaultImage.png";
+//        }
 
         Pending_request::create( [
             "pending_name"                    =>$request->pending_name,

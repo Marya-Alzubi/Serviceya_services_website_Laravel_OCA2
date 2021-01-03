@@ -118,7 +118,8 @@
 
                                 <div class="col-md-6">
                                     <div class="single-form form-group">
-                                      <label>upload your image <small style="color: red">(optional)</small> :</label>
+                                      <label>upload your image  :</label>
+{{--                                        <small style="color: red">(optional)</small>--}}
                                         <div class="input-group mb-3">
                                             <div class="custom-file">
                                                 <input type="file" class="custom-file-input"  name="pending_image" id="inputGroupFile02" value="{{old('pending_image')}}">
@@ -154,10 +155,10 @@
 
                                 <div class="col-md-12">
                                     <div class="single-form form-group">
-                                        <label>Describe your self <small style="color: red">(between 20 to 200 character)</small></label>
+                                        <label>Describe your self </label>
+{{--                                        <small style="color: red">(between 20 to 200 character)</small>--}}
                                         <textarea placeholder="Description.." name="pending_desc"  >{{old('pending_desc')}}</textarea>
                                         <div class="help-block with-errors">
-
                                         </div>
                                             @error("pending_desc")
                                             <p style="color:red;font-size: 1rem ;">{{$message}}</p>

@@ -166,12 +166,13 @@ return [
             'required'     => 'the city field is required .',
         ],
         'pending_image'  => [
-            'mimes'        => 'applicant image must be jpeg,jpg,png or gif .',
+            'required'     => 'the image is required .',
+//            'mimes'        => 'applicant image must be jpeg,jpg,png or gif .',
         ],
         'pending_desc'   => [
             'required'     => 'the description field is required .',
-            'min'          => 'the description field must be between (20-200) characters.',
-            'max'          => 'the description field must be between (20-200) characters.',
+            'min'          => 'the description field must not be less than 20 characters.',
+//            'max'          => 'the description field must be between (20-200) characters.',
         ],
         'pending_education_img' => [
             'required'     => 'educational degree image is required .',

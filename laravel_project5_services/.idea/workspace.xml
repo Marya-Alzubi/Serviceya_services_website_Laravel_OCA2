@@ -2,36 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f14745-bf7c-4ca2-a962-80b69f72e50c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/edit_dynamic_accepted_applicant.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApplicantController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PendingRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PendingRequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RejectedController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RejectedController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createApplicantRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/createCategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createCategoryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_30_022000_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_30_022000_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/admins/create_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/admins/crud/create_admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/crud/create_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/crud/create_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/crud/edit_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/categories/crud/edit_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/dynamic_tables/choose_category_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/choose_category_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/categories/dynamic_tables/single_category_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/dynamic_category_table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/accepted.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/pending/pending_request.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/dynamic_accepted_applicant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/pending/pending_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/pending/pending_table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/pending/single_pending.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/pending/single_pending.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index_dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index_dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/landing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/landing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/createPendingRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/createPendingRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/applicants/applicants_table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/dynamic_category_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/filtration_applicants/accepted/dynamic_category_table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/web/crud/create_applicant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/crud/create_applicant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/web/single_applicant_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/single_applicant_page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/web/single_category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/single_category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/singleapplicant.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/singleapplicant.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/web/view_all_categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/web/view_all_categories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/web/singleapplicant.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +185,7 @@
       <workItem from="1609556808631" duration="20769000" />
       <workItem from="1609585354482" duration="2649000" />
       <workItem from="1609595778750" duration="29000" />
-      <workItem from="1609595809251" duration="47019000" />
+      <workItem from="1609595809251" duration="53934000" />
     </task>
     <task id="LOCAL-00001" summary="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama">
       <created>1609409802498</created>
@@ -232,5 +215,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama" />
     <option name="LAST_COMMIT_MESSAGE" value="updating applicant form make it dynamic with category with hana and edit database| fix the problem of uploading 2 image with osama" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/web/single_applicant_page.blade.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

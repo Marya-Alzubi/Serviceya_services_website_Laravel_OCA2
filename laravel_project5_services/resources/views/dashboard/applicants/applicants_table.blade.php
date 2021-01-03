@@ -34,7 +34,7 @@
                 <td>{{$applicant->category->cat_name}}</td>
                 <td>{{$applicant->applicant_desc}}</td>
                 <td>{{$applicant->applicant_subscription_type}}</td>
-                <td><img width="200" height="200" src="{{asset("applicant_images/$applicant->applicant_education_img")}}"></td>
+                <td><img width="200" height="200" src="{{asset("pending_images/$applicant->applicant_education_img")}}"></td>
                 <td>
                     <a href="categories/{{$applicant->applicant_id}}">
                         <button class="btn btn-danger" value="EDIT" > show </button>

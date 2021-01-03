@@ -9,7 +9,7 @@
                     <div class="col-lg-4 col-md-7 col-sm-9">
                         <div class="single-pricing mt-40">
                             <div class="text-center">
-                                <img src='{{asset("applicant_images/$applicants->applicant_image")}}' class="rounded" alt="single category">
+                                <img src='{{asset("pending_images/$applicants->applicant_image")}}' class="rounded" alt="single category">
                             </div>
                             <div class="pricing-header text-center">
                                 <h4> {{$applicants->applicant_name}}</h4>
